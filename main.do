@@ -1,7 +1,7 @@
-* Main file
+* Trabajo Práctico No. 1 de Econometría
 
-* Subject: Econometría
-* Instructor: Gabriel Montes-Rojas
-* Authors: Lucas, Octavio, Sebastián y Victoria
+* Asignatura: Econometría
+* Docente: Gabriel Montes-Rojas
+* Estudiantes: Lucas, Octavio, Sebastián y Victoria
 
 clear all
