@@ -24,10 +24,5 @@ set mem 30m
 cd /Users/octavio/Desktop/econometrics-coursework
 
 * Importar bases de datos en archivo xlsx.
-import excel "EPH_personas_2020_4.xlsx", 
+import excel "EPH-2020-4.xlsx", firstrow case(lower)
 
-/* TODO: Filtrar
-Jefes de hogar
-25 a 65 años
-Ciudad Autónoma de Buenos Aires
-*/
