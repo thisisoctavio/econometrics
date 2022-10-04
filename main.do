@@ -11,9 +11,6 @@
 * Limpiar memoria.
 clear all
 
-* Utilizar hasta 30 megabytes de memoria.
-set mem 30m
-
 
 ****************************************
 * Primera Pregunta
@@ -23,6 +20,22 @@ set mem 30m
 * Directorio
 cd /Users/octavio/Desktop/econometrics-coursework
 
-* Importar bases de datos en archivo xlsx.
-import excel "EPH-2020-4.xlsx", firstrow case(lower)
+* Importar la base de datos en formato xlsx. La primera hoja es 2021, la segunda es 2020.
+import excel "EPH.xlsx", sheet("2020") firstrow case(lower)
 
+save eph2020.dta
+
+clear
+
+* Importar la base de datos en formato xlsx. La primera hoja es 2021, la segunda es 2020.
+import excel "EPH.xlsx", sheet("2021") firstrow case(lower)
+
+save eph2021.dta
+
+clear
+
+* Trabajamos sobre la EPH del cuarto trimestre de 2020...
+
+use eph2020.dta
+
+* TODO: responder las preguntas
