@@ -1,7 +1,7 @@
 # Trabajo Práctico no. 1 de Econometría
 
 
-Educación:
+## Educación:
 
 Utilizamos el Nivel de Educación
 
@@ -13,3 +13,16 @@ Utilizamos el Nivel de Educación
 - Superior universitario completo 
 - Sin instrucción
 - Ns/ Nr
+
+## Edad
+
+- Edad
+- Edad al cuadrado
+
+## Género
+
+- Varón
+- Mujer
+
+## Estado Civil
+
