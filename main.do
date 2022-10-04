@@ -49,6 +49,7 @@ lab def catch04 1 "Varon"
 lab def catch04 2 "Mujer", add
 lab val ch04 catch04
 
+lab var ch06 "ࠃuantos a񯳠cumplidos tiene?"
 
 
 use eph2020.dta
