@@ -34,20 +34,25 @@ keep if ch06 >= 25 & ch06 <= 65
 * Asalariado
 keep if cat_ocup == 3
 
-
-
-
-
-
-****************************************
+********************************************************************************
 * Primera Pregunta
-* Estimar el efecto de la educación sobre los ingresos de los asalariados
-****************************************
-
 * Computar el salario promedio mensual para cada muestra.
+********************************************************************************
 
+* Muestra
+mean p21 [w=pondiio]
 
+* Varones
+mean p21 if ch04 == 1 [w=pondiio] 
 
+* Mujeres
+mean p21 if ch04 == 2 [w=pondiio]
+
+* Edades
+mean p21 if ch06 < 35 [w=pondiio]
+mean p21 if ch06 >= 35 & ch06 < 45 [w=pondiio]
+mean p21 if ch06 >= 45 & ch06 < 55 [w=pondiio]
+mean p21 if ch06 >= 55
 
 
 
@@ -111,8 +116,4 @@ lab def catch12 9 "Educacion especial (discapacitado)", add
 lab def catch12 99 "Ns./Nr.", add
 lab val ch12 catch12
 
-
-use eph2020.dta
-
-* TODO: responder las preguntas
 
