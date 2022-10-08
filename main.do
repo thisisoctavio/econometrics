@@ -1,21 +1,68 @@
 * Trabajo Práctico No. 1 de Econometría
 
 * Asignatura: Econometría
-* Docente: Gabriel Montes-Rojas
-* Estudiantes: Lucas, Octavio, Sebastián y Victoria
+* Profesor: Gabriel V. Montes-Rojas
+* Estudiantes: Sebastián Burgermeister, Lucas S. Ordoñez, Victoria Señorele y Octavio Z. Sánchez
 
-****************************************
+********************************************************************************
 * Configuración
-****************************************
+********************************************************************************
 
 * Limpiar memoria.
 clear all
+
+* Algo
+set more off
+
+* Renombrar variables:
+rename * , lower
+rename codusu CODUSU
+
+********************************************************************************
+* Limpieza de datos
+********************************************************************************
+
+* Ciudad Autónoma de Buenos Aires
+keep if aglomerado == 32
+
+* Jefe/a del hogar
+keep if ch03 == 1
+
+* Entre 25 y 65 años
+keep if ch06 >= 25 & ch06 <= 65
+
+* Asalariado
+keep if cat_ocup == 3
+
+
+
+
 
 
 ****************************************
 * Primera Pregunta
 * Estimar el efecto de la educación sobre los ingresos de los asalariados
 ****************************************
+
+* Computar el salario promedio mensual para cada muestra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * Directorio
 cd /Users/octavio/Desktop/econometrics-coursework
