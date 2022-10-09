@@ -58,3 +58,29 @@ mean p21 if ch06 >= 35 & ch06 < 45 [w=pondiio]
 mean p21 if ch06 >= 45 & ch06 < 55 [w=pondiio]
 mean p21 if ch06 >= 55
 
+********************************************************************************
+* Cuarta pregunta
+* Estimar salarios
+********************************************************************************
+
+* Estimar salarios
+
+predict salario_estimado_varon if ch07 == 2 & nivel_ed == 6 & ch04 == 1
+
+predict salario_estimado_mujer if ch07 == 2 & nivel_ed == 6 & ch04 == 2
+
+
+
+
+* Obtener promedios por edad
+
+
+
+
+
+
+
+
+serrbar p21 std ch06, title("Salarios estimados")
+
+
