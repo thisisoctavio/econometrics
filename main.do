@@ -19,24 +19,21 @@ rename * , lower
 rename codusu CODUSU
 
 * Etiquetar
-lab var ch06 "Edad (años cumplidos)"
-
+label var ch04 "Género"
+label var ch06 "Edad (años)"
+label var p21 "Salario de la ocupación principal (mensual en pesos)"
 
 ********************************************************************************
 * Limpieza de datos
 ********************************************************************************
 
-* Ciudad Autónoma de Buenos Aires
-keep if aglomerado == 32
+keep if aglomerado == 32 // Ciudad Autónoma de Buenos Aires.
 
-* Jefe/a del hogar
-keep if ch03 == 1
+keep if ch03 == 1 // jefe o jefa del hogar.
 
-* Entre 25 y 65 años
-keep if ch06 >= 25 & ch06 <= 65
+keep if ch06 >= 25 & ch06 <= 65 // entre 25 y 65 años.
 
-* Asalariado
-keep if cat_ocup == 3
+keep if cat_ocup == 3 // asalariado.
 
 ********************************************************************************
 * Primera Pregunta
@@ -57,6 +54,13 @@ mean p21 if ch06 < 35 [w=pondiio]
 mean p21 if ch06 >= 35 & ch06 < 45 [w=pondiio]
 mean p21 if ch06 >= 45 & ch06 < 55 [w=pondiio]
 mean p21 if ch06 >= 55
+
+********************************************************************************
+* Segunda Pregunta
+* Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
+********************************************************************************
+
+
 
 ********************************************************************************
 * Cuarta pregunta
