@@ -84,7 +84,7 @@ regress ln_wage i.nivel_ed i.gender ib5.civil_status age c.age#c.age // Decidir 
 ********************************************************************************
 
 * Usamos interacciones
-* regress wage_log i.gender#ib2.nivel_ed i.gender#ib5.marital_status age c.age#c.age
+* regress wage_log i.gender#i.nivel_ed ib5.marital_status age c.age#c.age
 
 
 ********************************************************************************
