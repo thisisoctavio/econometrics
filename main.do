@@ -73,9 +73,7 @@ keep if cat_ocup == 3 // asalariado.
 * Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
 ********************************************************************************
 
-* Regress w = beta_0 + beta education + beta + ... + beta + beta age + beta age^2
-
-regress wage_log age c.age#c.age
+regress wage_log i.gender#ib2.nivel_ed i.gender#ib5.marital_status age c.age#c.age
 
 
 ********************************************************************************
