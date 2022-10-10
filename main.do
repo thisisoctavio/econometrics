@@ -20,12 +20,13 @@ rename codusu CODUSU
 rename ch04 gender
 rename ch06 age
 rename ch07 marital_status
-rename p21 wage
+
+generate wage = p21 / 1000
 
 * Etiquetar
 label variable gender "Género"
 label variable age "Edad (años)"
-label variable wage "Salario mensual de la ocupación principal (pesos)"
+label variable wage "Salario mensual de la ocupación principal (miles de pesos)"
 label variable marital_status "Estado civil"
 label variable nivel_ed "Nivel educaivo"
 
