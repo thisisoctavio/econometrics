@@ -47,6 +47,8 @@ keep if ch03 == 1 // jefe o jefa del hogar.
 
 keep if age >= 25 & age <= 65 // entre 25 y 65 años.
 
+keep if estado == 1 // ocupado.
+
 keep if cat_ocup == 3 // asalariado.
 
 ********************************************************************************
@@ -84,7 +86,7 @@ regress ln_wage i.nivel_ed i.gender ib5.civil_status age c.age#c.age // Decidir 
 ********************************************************************************
 
 * Usamos interacciones
-* regress wage_log i.gender#i.nivel_ed ib5.marital_status age c.age#c.age
+regress ln_wage i.gender#i.nivel_ed ib5.civil_status age c.age#c.age // [w=pondiio]
 
 
 ********************************************************************************
