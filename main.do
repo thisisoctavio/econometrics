@@ -17,11 +17,23 @@ set more off
 * Renombrar variables:
 rename * , lower
 rename codusu CODUSU
+rename ch04 gender
+rename ch06 age
+rename ch07 marital_status
+rename p21 wage
 
 * Etiquetar
-label var ch04 "Género"
-label var ch06 "Edad (años)"
-label var p21 "Salario de la ocupación principal (mensual en pesos)"
+label variable gender "Género"
+label variable age "Edad (años)"
+label variable wage "Salario mensual de la ocupación principal (pesos)"
+label variable marital_status "Estado civil"
+label variable nivel_ed "Nivel educaivo"
+
+label define status 1 "Unido" 2 "Casado" 3 "Separado / Divorciado" 4 "Viudo" 5 "Soltero"
+label values marital_status status
+
+label define levels 1 "Primaria incompleta" 2 "Primaria completa" 3 "Secundaria incompleta" 4 "Secundaria completa" 5 "Universitaria incompleta" 6 "Universitaria completa" 7 "Sin instrucción" 9 "NS / NR"
+label values nivel_ed levels
 
 ********************************************************************************
 * Limpieza de datos
@@ -31,7 +43,7 @@ keep if aglomerado == 32 // Ciudad Autónoma de Buenos Aires.
 
 keep if ch03 == 1 // jefe o jefa del hogar.
 
-keep if ch06 >= 25 & ch06 <= 65 // entre 25 y 65 años.
+keep if age >= 25 & age <= 65 // entre 25 y 65 años.
 
 keep if cat_ocup == 3 // asalariado.
 
@@ -40,26 +52,32 @@ keep if cat_ocup == 3 // asalariado.
 * Computar el salario promedio mensual para cada muestra.
 ********************************************************************************
 
-* Muestra
-mean p21 [w=pondiio]
+{
+    * Primero creamos categorías para la edad
+    recode age (min/34 = 1 "25-34") (35/44 = 2 "35-44") (45/54 = 3 "45-54") (55/max = 4 "55-65") , generate(generation)
 
-* Varones
-mean p21 if ch04 == 1 [w=pondiio] 
+    * Salario mensual general
+    mean wage [w=pondiio]
 
-* Mujeres
-mean p21 if ch04 == 2 [w=pondiio]
+    * Salario mensual según el género
+    bysort gender: summarize wage [w=pondiio]
 
-* Edades
-mean p21 if ch06 < 35 [w=pondiio]
-mean p21 if ch06 >= 35 & ch06 < 45 [w=pondiio]
-mean p21 if ch06 >= 45 & ch06 < 55 [w=pondiio]
-mean p21 if ch06 >= 55
+    * Salario mensual según la generación
+    bysort generation: summarize wage [w=pondiio]
+}
 
 ********************************************************************************
 * Segunda Pregunta
 * Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
 ********************************************************************************
 
+
+
+
+********************************************************************************
+* Segunda Pregunta
+* Evaluar diferencias en el retorno a la eduacion entre varones y mujeres.
+********************************************************************************
 
 
 ********************************************************************************
