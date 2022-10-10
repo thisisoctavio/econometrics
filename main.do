@@ -28,11 +28,11 @@ generate ln_wage = ln(wage)
 label variable gender "Género"
 label variable age "Edad (años)"
 label variable wage "Salario mensual de la ocupación principal (miles de pesos)"
-label variable marital_status "Estado civil"
+label variable civil_status "Estado civil"
 label variable nivel_ed "Nivel educaivo"
 
 label define status 1 "Unido/a" 2 "Casado/a" 3 "Separado/a / Divorciado/a" 4 "Viudo/a" 5 "Soltero/a"
-label values marital_status status
+label values civil_status status
 
 label define levels 1 "Primaria incompleta" 2 "Primaria completa" 3 "Secundaria incompleta" 4 "Secundaria completa" 5 "Universitaria incompleta" 6 "Universitaria completa" 7 "Sin instrucción" 9 "NS / NR"
 label values nivel_ed levels
@@ -75,7 +75,7 @@ keep if cat_ocup == 3 // asalariado.
 
 * Base: varón, soltero con primaria incompleta.
 
-regress ln_wage i.nivel_ed i.gender ib5.marital_status age c.age#c.age
+regress ln_wage i.nivel_ed i.gender ib5.civil_status age c.age#c.age // Decidir si ponderar y con qué ponderador [w=pondiio] o [w=pondera]
 
 
 ********************************************************************************
