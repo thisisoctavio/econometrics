@@ -19,10 +19,10 @@ rename * , lower
 rename codusu CODUSU
 rename ch04 gender
 rename ch06 age
-rename ch07 marital_status
+rename ch07 civil_status
 
 generate wage = p21 / 1000
-generate wage_log = ln(wage)
+generate ln_wage = ln(wage)
 
 * Etiquetar
 label variable gender "Género"
@@ -31,7 +31,7 @@ label variable wage "Salario mensual de la ocupación principal (miles de pesos)
 label variable marital_status "Estado civil"
 label variable nivel_ed "Nivel educaivo"
 
-label define status 1 "Unido" 2 "Casado" 3 "Separado / Divorciado" 4 "Viudo" 5 "Soltero"
+label define status 1 "Unido/a" 2 "Casado/a" 3 "Separado/a / Divorciado/a" 4 "Viudo/a" 5 "Soltero/a"
 label values marital_status status
 
 label define levels 1 "Primaria incompleta" 2 "Primaria completa" 3 "Secundaria incompleta" 4 "Secundaria completa" 5 "Universitaria incompleta" 6 "Universitaria completa" 7 "Sin instrucción" 9 "NS / NR"
@@ -73,13 +73,18 @@ keep if cat_ocup == 3 // asalariado.
 * Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
 ********************************************************************************
 
-regress wage_log i.gender#ib2.nivel_ed i.gender#ib5.marital_status age c.age#c.age
+* Base: varón, soltero con primaria incompleta.
+
+regress ln_wage i.nivel_ed i.gender ib5.marital_status age c.age#c.age
 
 
 ********************************************************************************
-* Segunda Pregunta
+* Tercera Pregunta
 * Evaluar diferencias en el retorno a la eduacion entre varones y mujeres.
 ********************************************************************************
+
+* Usamos interacciones
+* regress wage_log i.gender#ib2.nivel_ed i.gender#ib5.marital_status age c.age#c.age
 
 
 ********************************************************************************
