@@ -22,6 +22,7 @@ rename ch06 age
 rename ch07 marital_status
 
 generate wage = p21 / 1000
+generate wage_log = ln(wage)
 
 * Etiquetar
 label variable gender "Género"
@@ -72,7 +73,9 @@ keep if cat_ocup == 3 // asalariado.
 * Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
 ********************************************************************************
 
+* Regress w = beta_0 + beta education + beta + ... + beta + beta age + beta age^2
 
+regress wage_log age c.age#c.age
 
 
 ********************************************************************************
