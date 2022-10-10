@@ -10,4 +10,4 @@ Si el entrevistado no reporta ingresos se le asigna el valor -9 a P21 y se elimi
 
 ## Pregunta no. 2
 
-$$ wage = \beta_0 + \beta_1 $$
+$$ \text{wage} = \beta_0 + \dots + \beta_1 \cdot \text{mujer} + \dots + beta_10 \cdot \text{age} + \beta_11 \cdot \text{age}^2 $$
