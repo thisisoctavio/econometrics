@@ -14,6 +14,9 @@ clear all
 * Algo
 set more off
 
+* Instalar paquete para exportar a LaTeX
+ssc install estout, replace
+
 * Renombrar variables:
 rename * , lower
 rename codusu CODUSU
@@ -27,11 +30,16 @@ generate ln_wage = ln(wage)
 * Etiquetar
 label variable gender "Género"
 label variable age "Edad (años)"
-label variable wage "Salario mensual de la ocupación principal (miles de pesos)"
+label variable wage "Salario mensual (miles de pesos)"
+label variable ln_wage "Salario mensual (log)"
 label variable civil_status "Estado civil"
-label variable nivel_ed "Nivel educaivo"
+label variable nivel_ed "Nivel de educación"
 
-label define status 1 "Unido/a" 2 "Casado/a" 3 "Separado/a / Divorciado/a" 4 "Viudo/a" 5 "Soltero/a"
+label define genders 1 "Varón" 2 "Mujer"
+label values gender genders
+
+
+label define status 1 "Unida" 2 "Casada" 3 "Separada" 4 "Viuda" 5 "Soltera"
 label values civil_status status
 
 label define levels 1 "Primaria incompleta" 2 "Primaria completa" 3 "Secundaria incompleta" 4 "Secundaria completa" 5 "Universitaria incompleta" 6 "Universitaria completa" 7 "Sin instrucción" 9 "NS / NR"
@@ -75,10 +83,15 @@ keep if cat_ocup == 3 // asalariado.
 * Modelizar el efecto de la educación sobre los salarios controlando por edad, género y estado civil.
 ********************************************************************************
 
-* Base: varón, soltero con primaria incompleta.
+* Base: varón, soltero con primaria completa.
 
-regress ln_wage i.nivel_ed i.gender ib5.civil_status age c.age#c.age // Decidir si ponderar y con qué ponderador [w=pondiio] o [w=pondera]
+* Correr la regresión y almacenar la tabla en la memoria de eststo.
+eststo: regress ln_wage i.nivel_ed i.gender ib5.civil_status c.age##c.age [w=pondera]
 
+* Exportar a LaTeX: diseño amplio, mostrar el valor p
+esttab using second.tex, wide p label title(Resumen de regresión no. 1) interaction(" X ") nostar replace booktabs width(0.75\hsize)
+
+eststo clear // limpiar memoria de eststo.
 
 ********************************************************************************
 * Tercera Pregunta
@@ -86,8 +99,9 @@ regress ln_wage i.nivel_ed i.gender ib5.civil_status age c.age#c.age // Decidir 
 ********************************************************************************
 
 * Usamos interacciones
-regress ln_wage i.gender#i.nivel_ed ib5.civil_status age c.age#c.age // [w=pondiio]
+eststo: regress ln_wage i.gender#i.nivel_ed ib5.civil_status age c.age#c.age // [w=pondera]
 
+eststo clear // limpiar memoria de eststo.
 
 ********************************************************************************
 * Cuarta pregunta
@@ -96,22 +110,10 @@ regress ln_wage i.gender#i.nivel_ed ib5.civil_status age c.age#c.age // [w=pondi
 
 * Estimar salarios
 
-predict salario_estimado_varon if ch07 == 2 & nivel_ed == 6 & ch04 == 1
+* predict salario_estimado_varon if ch07 == 2 & nivel_ed == 6 & ch04 == 1
 
-predict salario_estimado_mujer if ch07 == 2 & nivel_ed == 6 & ch04 == 2
+* predict salario_estimado_mujer if ch07 == 2 & nivel_ed == 6 & ch04 == 2
 
-
-
-
-* Obtener promedios por edad
-
-
-
-
-
-
-
-
-serrbar p21 std ch06, title("Salarios estimados")
+* serrbar p21 std ch06, title("Salarios estimados")
 
 
