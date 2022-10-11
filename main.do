@@ -86,7 +86,7 @@ keep if cat_ocup == 3 // asalariado.
 * Base: varón, soltero con primaria completa.
 
 * Correr la regresión y almacenar la tabla en la memoria de eststo.
-eststo: regress ln_wage i.nivel_ed i.gender ib5.civil_status c.age##c.age [w=pondera]
+eststo: regress ln_wage i.nivel_ed i.gender ib5.civil_status c.age##c.age [w=pondera], baselevels
 
 * Exportar a LaTeX: diseño amplio, mostrar el valor p
 esttab using second.tex, wide p label title(Resumen de regresión no. 1) interaction(" X ") nostar replace booktabs width(0.75\hsize)
@@ -99,7 +99,18 @@ eststo clear // limpiar memoria de eststo.
 ********************************************************************************
 
 * Usamos interacciones
-eststo: regress ln_wage i.gender#i.nivel_ed ib5.civil_status age c.age#c.age // [w=pondera]
+
+* Opción 1: calculamos el efecto general y la diferencia con el efecto siendo mujer directamente.
+
+eststo: regress ln_wage nivel_ed#gender c.age##c.age [w=pondera], allbaselevels
+
+
+* Opción 2: calculamos el efecto siendo varón y el efecto siendo mujer. 
+
+eststo: regress ln_wage nivel_ed##gender c.age##c.age [w=pondera], allbaselevels
+
+
+* Creo que la opción 2 es más elegante y se ven las dos pendientes claramente. Luego podemos calcular la diferencia.
 
 eststo clear // limpiar memoria de eststo.
 
