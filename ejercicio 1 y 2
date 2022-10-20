@@ -1,0 +1,291 @@
+******* ejercicio 1a ********
+
+rename *,lower
+*************
+***recordar ejecutar etiquetas***
+
+*************************filtrado de base de base*************+
+*intervalo de edad
+keep if ch06 >=25 & ch06 <=65
+
+*aglomerado ciudad autonoma 
+keep if aglomerado == 32
+
+*Me quedo sólamente con los registros de JEFE/A de Hogar
+
+keep if ch03==1
+
+*Borramos los que no hayan declarado salario -9 y los que declaran 0
+drop if p21<=0
+
+*asalariados
+
+keep if cat_ocup == 3 & estado ==1
+*****************************+
+recode ch06 (min/34 = 1 "25-34") (35/44 = 2 "35-44") (45/54 = 3 "45-54") (55/max = 4 "55-65"), generate(generation)
+
+
+*computar salario promedio mensual para cada muestra
+mean p21 [w=pondiio]
+
+*salario mensual segun el genero
+
+bysort ch04: summarize p21 [w=pondiio]
+
+*salario mensual segun la generación
+
+bysort generation: summarize p21 [w=pondiio]
+
+*salario mensual segun el genero y el rango de edad
+
+bysort generation ch04: summarize p21 [w= pondiio]
+
+********* ejercicio 2 ********
+
+rename *,lower
+
+*recordar ejecutar etiquetas***
+
+***recordar ejecutar etiquetas***
+
+*************************filtrado de base de base*************+
+*intervalo de edad
+keep if ch06 >=25 & ch06 <=65
+
+*aglomerado ciudad autonoma 
+keep if aglomerado == 32
+
+*Me quedo sólamente con los registros de JEFE/A de Hogar
+
+keep if ch03==1
+
+*Borramos los que no hayan declarado salario -9 y los que declaran 0
+drop if p21<=0
+
+*asalariados
+
+keep if cat_ocup == 3
+******************************************
+******************************************
+
+*******************+regresion***********************
+*recordar wage = B0+B1.nivel_ed+B2.mujer+B3.edad^2+B4.ch07
+
+*ch07:estado civil
+
+****************************BASES*********************************
+*nivel_ed:sin instruccion(la incluyo en regresion)
+*eliminar ns-nr
+drop if nivel_ed == 9
+*genero:hombre(generado)
+*estadocivil(ch07):soltero(la realizo en regresion)
+*
+*creo variable edad^2
+
+gen edadcuadrado = ch06^2
+
+*creo variable dummy 
+gen hombre=0
+replace hombre=1 if ch04 ==1
+lab var hombre "=1 si es hombre"
+
+**************categorias base******
+*soltero:ch07
+*universitario completo:nivel_ed
+*mujer:ch04
+
+
+reg p21 i.b(5).ch07 i.b(5).nivel_ed hombre ch06 edadcuadrado
+
+test edadcuadrado ch06
+test edadcuadrado
+test ch06
+
+ ***** ejercicio 3 ******
+ 
+ rename *, lower
+*Creamos variable de años de educacion
+		gen an_educ=.
+		replace an_educ=0 if ch10==3
+		replace an_educ=0 if ch12==1
+		replace an_educ=0 if ch12==1
+	*jardin pre-escolar
+		replace an_educ = 1 if ch12==1
+	*primaria
+		replace an_educ=0 if ch12==2 & ch13==2 & ch14==0
+		replace an_educ=1 if ch12==2 & ch13==2 & ch14==1
+		replace an_educ=2 if ch12==2 & ch13==2 & ch14==2
+		replace an_educ=3 if ch12==2 & ch13==2 & ch14==3
+		replace an_educ=4 if ch12==2 & ch13==2 & ch14==4
+		replace an_educ=5 if ch12==2 & ch13==2 & ch14==5
+		replace an_educ=6 if ch12==2 & ch13==2 & ch14==6
+		replace an_educ=7 if ch12==2 & ch13==2 & ch14==7
+		replace an_educ=7 if ch12==2 & ch13==1
+	*secundaria.  Supuesto: no responde último año que aprobó, ponemos 10 años de educ.
+		replace an_educ=7 if ch12==4 & ch13==2 & ch14==0
+		replace an_educ=8 if ch12==4 & ch13==2 & ch14==1
+		replace an_educ=9 if ch12==4 & ch13==2 & ch14==2
+		replace an_educ=10 if ch12==4 & ch13==2 & ch14==3
+		replace an_educ=10 if ch12==4 & ch13==2 & (ch14==. | ch14==99)
+		replace an_educ=11 if ch12==4 & ch13==2 & ch14==4
+		replace an_educ=12 if ch12==4 & ch13==2 & ch14==5
+		replace an_educ=13 if ch12==4 & ch13==2 & (ch14>=6 & ch14<=9)
+		replace an_educ=12 if ch12==4 & ch13==1
+		replace an_educ=12 if ch12==4 & ch13==1 & ch14==5
+		replace an_educ=13 if ch12==4 & ch13==1 & ch14==6
+	*EGB. Supuesto: 5 años educación a quienes no responden el último finalizado.
+		replace an_educ=0 if ch12==3 & ch13==2 & ch14==0
+		replace an_educ=1 if ch12==3 & ch13==2 & ch14==1
+		replace an_educ=2 if ch12==3 & ch13==2 & ch14==2
+		replace an_educ=3 if ch12==3 & ch13==2 & ch14==3
+		replace an_educ=4 if ch12==3 & ch13==2 & ch14==4
+		replace an_educ=5 if ch12==3 & ch13==2 & ch14==5
+		replace an_educ=5 if ch12==3 & ch13==2 &(ch14==. | ch14==99)
+		replace an_educ=6 if ch12==3 & ch13==2 & ch14==6
+		replace an_educ=7 if ch12==3 & ch13==2 & ch14==7
+		replace an_educ=8 if ch12==3 & ch13==2 & ch14==8
+		replace an_educ=9 if ch12==3 & ch13==2 & ch14==9
+		replace an_educ=9 if ch12==3 & ch13==1
+	*Polimodal. Supuesto: aprobó 1 año de polimodal.
+		replace an_educ=9 if ch12==5 & ch13==2 & ch14==0
+		replace an_educ=10 if ch12==5 & ch13==2 & ch14==1
+		replace an_educ=10 if ch12==5 & ch13==2 &(ch14==. | ch14==99)
+		replace an_educ=11 if ch12==5 & ch13==2 & ch14==2
+		replace an_educ=12 if ch12==5 & ch13==2 & ch14==3
+		replace an_educ=12 if ch12==5 & ch13==1
+		replace an_educ=13 if ch12==5 & ch13==1 & ch14==4
+	*Terciario. Supusto: primer año de educación siempre es el 13avo.
+		replace an_educ=13 if ch12==6 & ch13==2 & ch14==0
+		replace an_educ=14 if ch12==6 & ch13==2 & ch14==1
+		replace an_educ=15 if ch12==6 & ch13==2 & ch14==2
+		replace an_educ=15 if ch12==6 & ch13==2 &(ch14==. | ch14==99)
+		replace an_educ=16 if ch12==6 & ch13==2 & ch14==3
+		replace an_educ=17 if ch12==6 & ch13==2 & ch14==4
+		replace an_educ=17 if ch12==6 & ch13==1
+	*Universitario
+		replace an_educ=13 if ch12==7 & ch13==2 & ch14==0
+		replace an_educ=14 if ch12==7 & ch13==22 & ch14==1
+		replace an_educ=15 if ch12==7 & ch13==2 & ch14==2
+		replace an_educ=15 if ch12==7 & ch13==2 &(ch14==. | ch14==99)
+		replace an_educ=16 if ch12==7 & ch13==2 & ch14==3
+		replace an_educ=17 if ch12==7 & ch13==2 & ch14==4
+		replace an_educ=18 if ch12==7 & ch13==2 & ch14==5
+		replace an_educ=18 if ch12==7 & ch13==2 & (ch14>5 & ch14<10)
+		replace an_educ=18 if ch12==7 & ch13==1
+		replace an_educ=13 if ch12==7 & ch13==2 & ch14==1
+	*Posgrado universitario
+		replace an_educ=18 if ch12==8 & ch13==2 & ch14==0
+		replace an_educ=19 if ch12==8 & ch13==2 & ch14==1
+		replace an_educ=20 if ch12==8 & ch13==2 & ch14==2
+		replace an_educ=20 if ch12==8 & ch13==2 &(ch14==. | ch14==99)
+		replace an_educ=20 if ch12==8 & ch13==2 & (ch14>2 & ch14<10)
+		replace an_educ=20 if ch12==8 & ch13==1
+		
+
+		
+*intervalo de edad
+keep if ch06 >=25 & ch06 <=65
+
+*aglomerado ciudad autonoma 
+keep if aglomerado == 32
+
+*Me quedo sólamente con los registros de JEFE/A de Hogar
+
+keep if ch03==1
+
+*Borramos los que no hayan declarado salario -9 y los que declaran 0
+drop if p21<=0
+
+*asalariados
+
+keep if cat_ocup == 3
+keep if estado == 1
+
+
+
+
+
+*****genero variable dummy sexo****
+gen hombre = 0
+replace hombre=1 if ch04 ==1
+lab var hombre "=1 si es hombre"
+
+************************regresion********
+*wage=B0+B1sexo+B3an_educ+B4sexo.an_educ
+**falta ver interaccion
+************************
+
+gen lp21 = ln(p21)
+
+******regresion con continuo en años de educacion**************************
+
+
+reg lp21 an_educ hombre c.an_educ#i.hombre 
+
+******regresion con dummy en años de educacion
+
+reg lp21 i.b(6).nivel_ed i.hombre i.nivel_ed#i.hombre
+
+
+/*
+
+
+
+
+
+
+
+****+ ejercicio 2
+
+
+
+****inciso 1
+
+gen lnearnings = ln(earnings)
+
+reg earnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+reg lnearnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+reg earnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+****inciso 2
+
+*ser mujer == 0 es 6102 
+
+gen inter = jtpa_training * sex
+
+reg lnearnings inter jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+
+reg lnearnings c.jtpa_training#i.sex jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+
+reg earnings c.jtpa_training#i.sex jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+/* 
+
+son cosas que no controladndo y estan correlacionando con jtps training
+
+hijos
+cercania
+compuradora
+discapacitado
+papas separados
+buena alimentacion
+jtpa_offer
+es importante utilizar como variable instrumental de variables q presentemos datos
+
+*/
+
+
+******* inciso 4
+
+ivregress 2sls earnings (jtpa_training = jtpa_offer) sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+ivregress 2sls earnings (jtpa_training = jtpa_offer) 
+
