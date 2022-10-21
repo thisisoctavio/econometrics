@@ -1,0 +1,52 @@
+
+
+****inciso 1
+
+gen lnearnings = ln(earnings)
+
+reg earnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+reg lnearnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+reg earnings jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+****inciso 2
+
+*ser mujer == 0 es 6102 
+
+gen inter = jtpa_training * sex
+
+reg lnearnings inter jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+
+reg lnearnings c.jtpa_training#i.sex jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+
+reg earnings c.jtpa_training#i.sex jtpa_training sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+
+/* 
+
+son cosas que no controladndo y estan correlacionando con jtps training
+
+hijos
+cercania
+compuradora
+discapacitado
+papas separados
+buena alimentacion
+jtpa_offer
+es importante utilizar como variable instrumental de variables q presentemos datos
+
+*/
+
+
+******* inciso 4
+
+ivregress 2sls earnings (jtpa_training = jtpa_offer) sex hsorged black hispanic married wkless13 age2225 age2629 age3035 age3644 age4554
+
+ivregress 2sls earnings (jtpa_training = jtpa_offer) 
+
