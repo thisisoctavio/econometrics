@@ -97,9 +97,27 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 ## Pregunta no. 2
 Utilizamos la ecuación de Mincer con el objetivo de estimar la influencia de la educación en el ingreso laboral, a través del método de Mínimo cuadrados ordinarios(MCO).Suponemos una relación lineal entre los años de educación y el retorno salarial, siendo el parámetro de interés el efecto marginal (en %) en el ingreso total de un año más de educación formal.Además, como condición necesaria para el cumplimiento de las propiedades asintóticas, debemos tener una muestra aleatoria, con una cantidad de observaciones n>30. Este es un supuesto factible para la EPH.
 La condición clave que debe cumplirse para que esta estimación sea consistente, es la condición de ortogonalidad:
+
 $$ E(x´u) = 0 $$
+
 $$ \text{siendo x el vector de regresores y $u$ el de residuos} $$
-Esta condición supone que los residuos no están correlacionados con los regresores y su media es igual a 
+
+Esta condición supone que los residuos no están correlacionados con los regresores y su media es igual a 0
+
+La otra condición necesaria para la consistencia de este estimador es que no existan relaciones lineales entre los regresores. formalmente:
+
+$$ E(x´x) = k $$
+
+$$ \text{con $k$ el número de variables explicativas} $$
+
+Además, tratándose de un modelo lineal, decimos que un estimador está **identificado** cuando se puede obtener como función de esperanzas poblacionales. En el caso del estimador de MCO:
+
+$$ \beta = [E(x´x)^{-1} E(x´y)] $$
+
+Entonces, tenemos la identificación del estimador.además, con el cumplimiento delas anteriores condiciones podemos asegurar que la estimación de MCO es consistente.
+ 
+Utilizmaos el siguiente  
+
 
 
 
