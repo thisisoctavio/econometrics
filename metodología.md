@@ -21,10 +21,18 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 #### Salario promedio mensual dependiendo del genero en el 2020 y 2021
 
-|2021|Salario promedio|  n | Weight| Min |	Max |
+##### 2021
+
+|Género|Salario promedio|  n | Weight| Min |	Max |
 |---|---|---|---|---|---|
 |Masculino|$99940.52|133|334545|6000|	280000|
 |Femenino|$73945.06|113|256482|4000|200000|
+
+##### 2020
+|Género|Salario promedio|  n | Weight| Min |	Max |
+|---|---|---|---|---|---|
+|Masculino|
+|Femenino|
 
 #### Salario promedio para distintos rangos de edad
 
@@ -68,6 +76,23 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 |**45 - 54**|28     |  63555 |    $90179.8   |56600.53  |    15000   |  200000|
 |**55 - 65**| 30     |  48966  |  $71758.75   | 52981.5|       4000    | 178000|
 
+##### 2020 - Masculino
+
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|
+|**35 - 44**|
+|**45 - 54**|
+|**55 - 65**|
+
+##### 2020 - Femenino
+
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|
+|**35 - 44**|
+|**45 - 54**|
+|**55 - 65**|
 
 ## Pregunta no. 2
 Utilizamos la ecuación de Mincer
