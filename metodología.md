@@ -2,11 +2,11 @@
 
 # Primera parte: Estimar el efecto de la educación sobre los ingresos de los asalariados
 
-## Etiquetas
+## Características
 
-En el estado civil se simplificó la notación y se incluyó persona divorciada dentro de persona separada.
+En primer lugar, utilizamos microdatos de la EPH con datos de invididuos del cuarto trimestre de 2020 y 2021.Restringiendo de la muestra a hombres y mujeres entre 25-65 años de edad,para la ciudad autonoma de Buenos Aires que presenten la caracteristica de ser jefe/a de hogar, esten empleados y sean asalariados. Con esta población inspeccionaremos el efecto de la educación en el ingreso laboral.
 
-## Ingreso
+## inciso 1
 
 Para el ingreso utilizamos la variable P21 (ingresos habituales de la ocupación principal del individuo) expandida por el ponderador PONDIIO (ponderador para el ingreso de la ocupación principal).
 
