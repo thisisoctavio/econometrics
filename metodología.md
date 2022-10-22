@@ -1,6 +1,6 @@
 # Metodología
 
-# Primera parte
+# Primera parte: Estimar el efecto de la educación sobre los ingresos de los asalariados
 
 ## Etiquetas
 
