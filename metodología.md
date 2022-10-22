@@ -69,6 +69,9 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 |**55 - 65**| 30     |  48966  |  $71758.75   | 52981.5|       4000    | 178000|
 
 
+## Pregunta no. 2
+Utilizamos la ecuación de Mincer
+
 
 
 
