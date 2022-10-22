@@ -23,10 +23,23 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 |2021|Salario promedio|  n | Weight| Min |	Max |
 |---|---|---|---|---|---|
-|Masculino|$99940.52|133|334545|$6000|	$280000|
-|Femenino|$73945.06|113|256482|$4000|$200000|
+|Masculino|$99940.52|133|334545|6000|	280000|
+|Femenino|$73945.06|113|256482|4000|200000|
 
 #### Salario promedio para distintos rangos de edad
+
+##### 2021
+
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|54|	151375|	$84204.97|	50654.79|	22000|	280000|
+|**35 - 44**| 75    |  181559  |  $92335.66 |   52730.8   |   15000 |    200000|
+|**45 - 54**| 59     | 149697   |  $91128.9 |  53016.67  |    15000   |  200000|
+|**55 - 65**|58   |   108396 |   $85312.72 |  61124.46   |    4000    | 250000|
+
+
+##### 2020
+
 
 
 
