@@ -40,6 +40,35 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 ##### 2020
 
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|
+|**35 - 44**|
+|**45 - 54**|
+|**55 - 65**|
+
+
+#### Salariop promedio para distintos rangos de edad y genero
+
+##### 2021 - Masculino
+
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|33|       93089|    $99243.81   |57483.82|      22000   |  280000|
+|**35 - 44**|41 |      95884 |   $110048.9  | 58203.82 |     18000  |   200000|
+|**45 - 54**|31  |     86142  |  $91829.14 |  51043.52  |    25000 |    200000|
+|**55 - 65**|28   |    59430   | $96480.21|   65880.92   |    6000|     250000|
+
+##### 2021 - Femenino
+
+|Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
+|---|---|---|---|---|---|---|
+|**25 - 34**|  21 |      58286 |   $60186.32|   22563.86  |    22000|     124000|
+|**35 - 44**| 34   |    85675 |   $72511.71  |  37581.3  |    15000   |  160000|
+|**45 - 54**|28     |  63555 |    $90179.8   |56600.53  |    15000   |  200000|
+|**55 - 65**| 30     |  48966  |  $71758.75   | 52981.5|       4000    | 178000|
+
+
 
 
 
