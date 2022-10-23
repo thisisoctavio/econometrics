@@ -208,7 +208,7 @@ Consideramos el estudio del efecto de la capacitación por programas publicos so
 El JTPA empezó en 1983 y continuó hasta bien estrados los 1990.Un subprograma del mismo(Title II) se ofrecía a individuos con "problemas para el empleo" (barriers to employment): aquellos que usaban beneficios sociales de largo plazo, desertores de la primaria o secundaria, aquello con 15 o más semanas de desempleo, con problemas con el inglés, discapacidades mentales o físicas, problemas de lectura o arrestos.Estos individuos fueron *aleatoriamente ofrecidos* la posiblidad de capacitarse en JTPA, mientras que aquellos no seleccionados fueron excluidos por 18 meses de toda capacitación.No todos los ofrecidos efectivos efectivamente hicieron la capacitación.
 Usamos la ase de datos de Abadie, Angrist e imbens(2002) que contiene información sobre adultos que participaron y que no participaron en JTPA
 
-## Pregunta no.1
+## Pregunta no.1:Modelo en niveles y log-lin
 Para ver el efecto de JTPA training sobre los ingresos, realizamos los siguientes modelos de regresión, teniendo en cuenta Q-1 dummies en edad, en este caso 4
 
 #### Modelo en niveles
