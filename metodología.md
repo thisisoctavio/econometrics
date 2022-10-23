@@ -189,9 +189,11 @@ Graficamente junto con los errores estandar de la estimacion con la edad
 ### Femenino 2021
 ![image](https://user-images.githubusercontent.com/67765423/197367830-b743e944-07e6-49f3-a11b-2c150fd864ea.png)
 
-### Masculino 2021
+### Masculino 2020
+![image](https://user-images.githubusercontent.com/67765423/197368107-27b2d4ec-c172-410c-ae56-51e8ceb4260a.png)
 
 ### Femenino 2020
+![image](https://user-images.githubusercontent.com/67765423/197368113-66202654-ec9a-444e-9f38-c193935ddd3f.png)
 
 
 
