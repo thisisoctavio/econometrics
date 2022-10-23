@@ -149,6 +149,29 @@ Por otro lado se utilizo un modelo con intereaccion entre dummies(en este caso n
 
 $$ logsalario = \beta_0 + \beta_1nivel.ed + \beta_2género +\beta_3nivel.ed*género $$
 
+Obteniendo como resultado
+
+### 2021
+
+<img width="819" alt="image" src="https://user-images.githubusercontent.com/67765423/197367301-f1467322-3369-457c-8cd6-5b8e9ad6c7c9.png">
+
+### 2020
+
+### pregunta no.4
+Utilizamos un modelo para estimar el salario promedio para un hombre y una mujer con educación universitaria (de grado) completo, casado, para todos los años posibles de edad 25-65
+
+$$ salario = \beta_0 + \beta_1género $$
+
+### 2021
+<img width="641" alt="image" src="https://user-images.githubusercontent.com/67765423/197367408-aa18a711-b625-4b98-92ae-af6f4b367f60.png">
+
+Obtenemos los valores predichos
+
+|Género|Salario Promedio|
+|---|---|
+|Masculino|111550|
+|Femenino|101625|
+
 
 
 
