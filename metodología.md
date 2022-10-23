@@ -184,18 +184,17 @@ Obtenemos los valores predichos
 
 Graficamente junto con los errores estandar de la estimacion con la edad
 
-### 2021 Masculino 
-![image](https://user-images.githubusercontent.com/67765423/197367781-9ff113a1-bc25-4e69-a516-608740fe2f4a.png)
+### 2021 Masculino - Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197369890-a16bb706-4654-4207-b793-a3373a0e4687.png)
 
-### 2021 Femenino 
-![image](https://user-images.githubusercontent.com/67765423/197367830-b743e944-07e6-49f3-a11b-2c150fd864ea.png)
+### 2021 Femenino - Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197369909-359d610f-87a7-4780-a049-bb2a9f020068.png)
 
-### 2020 Masculino 
-![image](https://user-images.githubusercontent.com/67765423/197368107-27b2d4ec-c172-410c-ae56-51e8ceb4260a.png)
+### 2020 Masculino - Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197369928-b4e230f2-7d49-441c-9180-9043917e2e77.png)
 
-### 2020 Femenino 
-![image](https://user-images.githubusercontent.com/67765423/197368113-66202654-ec9a-444e-9f38-c193935ddd3f.png)
-
+### 2020 Femenino - Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197369956-347c7cc0-03e0-439b-92d3-8cd2a4254f21.png)
 
 # Segunda parte: Efecto de la capacitación en los salarios
 
@@ -238,6 +237,8 @@ Para ver el efecto de jtpa_training_women sobre los ingresos realizamos la sigui
 La diferencia por génerp en los rendimientos de la capacitación la podemos observar en la variable jtpa_training_women, la misma nos dice que la mujer gana en promedio $1951 mas que el hombre(para cualquier nivel de edad y cualquiera sea la etnia de los individuos)
 
 utilizando un modelo Log-lin
+
+
 ![image](https://user-images.githubusercontent.com/67765423/197369249-c76ac314-62ab-4302-9f53-27c9ea440e0a.png)
 
 La diferencia en los rendimientos la d¿vemos en la interaccion entre sexo y jtpa_training. vemos que el rendimiento de la capacitacion en las mujeres es 25% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
