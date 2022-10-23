@@ -120,6 +120,35 @@ Utilizamos el siguiente modelo, controlando por género, edad y estado civil.
 
 $$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género + \beta_4edad + \beta_5edad^2 $$
 
+dando como resultado
+### 2021
+  <img width="442" alt="image" src="https://user-images.githubusercontent.com/67765423/197366833-238a8406-0b1c-467b-b1f5-aa8fb8b83431.png">
+dando como resultado
+
+### 2020
+
+Observando los coeficientes de la regresión de la variable nivel _ed,podemos observar que los coeficientes son significativos excepto la categoría superior universitaria completa. En este caso se presenta una muestra de $n=246$ siendo acotada, por este motivo podemos concluir a través de un análisis de una muestra completa de la EPH que la categoría superior universitaria completa presenta la característica de ser significativa
+
+## pregunta no.3
+Utilizamos un modelo para evaluar si hay diferencias en los retornos a la educación entre hombres y mujeres con el objetivo de encontrar si existe una brecha salarial.
+
+Por un lado se generó una variable en educ con el objetivo de computar años de educación en cada muestra.Esta variable se la obtuvo a través de la condicionalidad de variables de la EPH relacionadas con educación (ch12, ch13 y ch14)
+
+$$ logsalario = \beta_0 + \beta_1an.educ + \beta_2género +\beta_3an.educ*género $$
+
+dando como resultado
+
+### 2021
+<img width="665" alt="image" src="https://user-images.githubusercontent.com/67765423/197367155-12dc8234-efab-4a93-a515-94638d6a4c51.png">
+
+Podemos observar que el coefiente de la interacción entre genero y años de educación no es significativo.Con un analisis de una muestra completa de la EPH obtenemos que es un coeficiente significativo, Denotando claramente la brecha salarial que presentabamos como hipotesis
+
+### 2020
+
+Por otro lado se utilizo un modelo con intereaccion entre dummies(en este caso nivel_ed y género)
+
+$$ logsalario = \beta_0 + \beta_1nivel.ed + \beta_2género +\beta_3nivel.ed*género $$
+
 
 
 
