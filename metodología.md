@@ -146,6 +146,8 @@ dando como resultado
 Podemos observar que el coefiente de la interacción entre genero y años de educación no es significativo.Con un analisis de una muestra completa de la EPH obtenemos que es un coeficiente significativo, Denotando claramente la brecha salarial que presentabamos como hipotesis
 
 ### 2020
+<img width="664" alt="image" src="https://user-images.githubusercontent.com/67765423/197368041-eea7f1fb-f7de-4cef-9059-f54f1324d0be.png">
+
 
 Por otro lado se utilizo un modelo con intereaccion entre dummies(en este caso nivel_ed y género)
 
@@ -158,6 +160,7 @@ Obteniendo como resultado
 <img width="819" alt="image" src="https://user-images.githubusercontent.com/67765423/197367301-f1467322-3369-457c-8cd6-5b8e9ad6c7c9.png">
 
 ### 2020
+<img width="913" alt="image" src="https://user-images.githubusercontent.com/67765423/197368047-3b683b3e-c4a3-4b73-873f-d2761206e241.png">
 
 ### pregunta no.4
 Utilizamos un modelo para estimar el salario promedio para un hombre y una mujer con educación universitaria (de grado) completo, casado, para todos los años posibles de edad 25-65
@@ -167,12 +170,16 @@ $$ salario = \beta_0 + \beta_1género $$
 ### 2021
 <img width="641" alt="image" src="https://user-images.githubusercontent.com/67765423/197367408-aa18a711-b625-4b98-92ae-af6f4b367f60.png">
 
+### 2020
+<img width="641" alt="image" src="https://user-images.githubusercontent.com/67765423/197368064-fa28dc3f-f83c-4087-9dec-819ae4c0a5dd.png">
+
+
 Obtenemos los valores predichos
 
-|Género|Salario Promedio|
-|---|---|
-|Masculino|$111550|
-|Femenino|$101625|
+|Género|Salario Promedio 2021|Salario Promedio 2020|
+|---|---|---|
+|Masculino|$111550|$77538.46|
+|Femenino|$101625|$80500|
 
 Graficamente junto con los errores estandar de la estimacion con la edad
 
