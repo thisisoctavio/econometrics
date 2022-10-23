@@ -116,7 +116,10 @@ $$ \beta = [E(x´x)^{-1} E(x´y)] $$
 
 Entonces, tenemos la identificación del estimador.además, con el cumplimiento delas anteriores condiciones podemos asegurar que la estimación de MCO es consistente.
  
-Utilizmaos el siguiente  
+Utilizamos el siguiente modelo, controlando por género, edad y estado civil.
+
+$$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género + \beta_4edad + \beta_5edad^2 $$
+
 
 
 
