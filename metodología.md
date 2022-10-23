@@ -6,7 +6,7 @@
 
 En primer lugar, utilizamos microdatos de la EPH con datos de invididuos del cuarto trimestre de 2020 y 2021.Restringiendo de la muestra a hombres y mujeres entre 25-65 años de edad,para la ciudad autonoma de Buenos Aires que presenten la caracteristica de ser jefe/a de hogar, esten empleados y sean asalariados. Con esta población inspeccionaremos el efecto de la educación en el ingreso laboral.
 
-## Pregunta no. 1 : Efecto de JTPA Training sobre los ingresos
+## Pregunta no. 1
 
 Para el ingreso utilizamos la variable P21 (ingresos habituales de la ocupación principal del individuo) expandida por el ponderador PONDIIO (ponderador para el ingreso de la ocupación principal).Si el entrevistado no reporta ingresos se le asigna el valor -9 a P21 y se elimina la observación asignándole al ponderador un valor de cero.
 A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de edad en intervalos ("25-34", "35-44", "45-54", "55-65")
@@ -40,7 +40,7 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 |Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
 |---|---|---|---|---|---|---|
-|**25 - 34**|54|	151375|	$84204.97|	50654.79|	22000|	280000|
+|**25 - 34**| 54    |  151375 |   $84204.97   |50654.79    |  22000    | 280000|
 |**35 - 44**| 75    |  181559  |  $92335.66 |   52730.8   |   15000 |    200000|
 |**45 - 54**| 59     | 149697   |  $91128.9 |  53016.67  |    15000   |  200000|
 |**55 - 65**|58   |   108396 |   $85312.72 |  61124.46   |    4000    | 250000|
@@ -95,7 +95,7 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 |**55 - 65**|14      | 46730|    $37735.67   |20013.18|       3000|      65000|
 
 ## Pregunta no. 2
-Utilizamos la ecuación de Mincer con el objetivo de estimar la influencia de la educación en el ingreso laboral, a través del método de Mínimo cuadrados ordinarios(MCO).Suponemos una relación lineal entre los años de educación y el retorno salarial, siendo el parámetro de interés el efecto marginal (en %) en el ingreso total de un año más de educación formal.Además, como condición necesaria para el cumplimiento de las propiedades asintóticas, debemos tener una muestra aleatoria, con una cantidad de observaciones n>30. Este es un supuesto factible para la EPH.
+Utilizamos la ecuación de Mincer con el objetivo de estimar la influencia de la educación en el ingreso laboral, a través del método de Mínimos cuadrados ordinarios(MCO).Suponemos una relación lineal entre los años de educación y el retorno salarial, siendo el parámetro de interés el efecto marginal (en %) en el ingreso total de un año más de educación formal.Además, como condición necesaria para el cumplimiento de las propiedades asintóticas, debemos tener una muestra aleatoria, con una cantidad de observaciones $n>30$, Este es un supuesto factible para la EPH.
 La condición clave que debe cumplirse para que esta estimación sea consistente, es la condición de ortogonalidad:
 
 $$ E(x´u) = 0 $$
@@ -139,7 +139,7 @@ Por un lado se generó una variable en educ con el objetivo de computar años de
 
 $$ logsalario = \beta_0 + \beta_1an.educ + \beta_2género +\beta_3an.educ*género $$
 
-dando como resultado
+Dando como resultado
 
 ### 2021
 <img width="665" alt="image" src="https://user-images.githubusercontent.com/67765423/197367155-12dc8234-efab-4a93-a515-94638d6a4c51.png">
