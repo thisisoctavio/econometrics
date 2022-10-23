@@ -6,7 +6,7 @@
 
 En primer lugar, utilizamos microdatos de la EPH con datos de invididuos del cuarto trimestre de 2020 y 2021.Restringiendo de la muestra a hombres y mujeres entre 25-65 años de edad,para la ciudad autonoma de Buenos Aires que presenten la caracteristica de ser jefe/a de hogar, esten empleados y sean asalariados. Con esta población inspeccionaremos el efecto de la educación en el ingreso laboral.
 
-## Pregunta no. 1
+## Pregunta no. 1 : Efecto de JTPA Training sobre los ingresos
 
 Para el ingreso utilizamos la variable P21 (ingresos habituales de la ocupación principal del individuo) expandida por el ponderador PONDIIO (ponderador para el ingreso de la ocupación principal).Si el entrevistado no reporta ingresos se le asigna el valor -9 a P21 y se elimina la observación asignándole al ponderador un valor de cero.
 A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de edad en intervalos ("25-34", "35-44", "45-54", "55-65")
@@ -226,9 +226,45 @@ en este caso eliminamos earnings menores a 1, para aplicar el modelo en terminos
 
 Observando la semielasticidad, la interpretación de los coeficientes difiere del anterior modelo, en este caso los coeficientes miden un cambia porcentual en la variable dependiente ante un cambio absoluto en la independiente.Un individuo que realizo la capacitación gana un 26% mas que uno que no la realizo.Nuevamente, este resultado es sin distinguir entre género,edad y etnia.Además, podemos observar que la variable es sifnificativa ya que el valor del estadistico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
+## Pregunta no.2:Evaluar si existen diferencias entre hombres y mujeres en terminos del efecto de la capacitación
+
+Para ver si hay diferencias entre hombres y mujeres en terminos del efecto de la capacitación creamos la variable jta_training_women la cual consiste en la interaccion entre la variable jtpa_training y la variable sex.
+
+Para ver el efecto de jtpa_training_women sobre los ingresos realizamos la siguiente regresion:
+![image](https://user-images.githubusercontent.com/67765423/197369187-9ce3e3cc-906c-4597-8971-d81f78aba54f.png)
+
+![image](https://user-images.githubusercontent.com/67765423/197369199-e808fc4e-1cab-4565-916b-a7a9ef7d2fa4.png)
+
+La diferencia por génerp en los rendimientos de la capacitación la podemos observar en la variable jtpa_training_women, la misma nos dice que la mujer gana en promedio $1951 mas que el hombre(para cualquier nivel de edad y cualquiera sea la etnia de los individuos)
+
+utilizando un modelo Log-lin
+![image](https://user-images.githubusercontent.com/67765423/197369249-c76ac314-62ab-4302-9f53-27c9ea440e0a.png)
+
+La diferencia en los rendimientos la d¿vemos en la interaccion entre sexo y jtpa_training. vemos que el rendimiento de la capacitacion en las mujeres es 25% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
+
+## Pregunta no.3:Elaborar un argumento para la posuble endogeneidad de jtpa training
+La variable jtpa_capacitacion es endógena ya que depende en parte de la variable jtpa_offer debido a que aquellos sujetos que reciben la oferta del curso disponible son más propensos a asistir a este curso y obtener capacitación.
+Así, la variable jtpa_offer se puede usar como variable instrumental ya que cumple con los dos requisitos necesarios:
+-	Exogeneidad: Como la oferta es aleatoria, es exógena y por ende la covarianza entre jtpa_offer y los errores es nula.
+-	Relevancia: El recibir la oferta explica en parte el hecho de que un sujeto obtenga capacitación, es decir la covarianza entre jtpa_offer y jtpa_training debe ser diferente de cero. 
+
+## Pregunta no.4:Uso de IV para solucionar endogeneidad
+Para solucionar la endogeneidad con la variable instrumental elegida corrimos la siguiente regresión en STATA
+**ivregress 2sls earning (jtpa_trainign = jtpa_offer) sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
+
+![image](https://user-images.githubusercontent.com/67765423/197369418-f687ad0a-4574-4de2-a0b8-5a88a588c6a3.png)
+
+El comando este realiza la regresión en dos etapas. 
+La primer etapa consiste en regresar la variable endógena en el instrumento , controlando por las demás variables exógenas:
+**reg jtpa_training jtpa_offer**
+**predict jtpa_training_hat**
+
+La segunda etapa consiste en 
+**reg earning jtpa_trainign sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
+**predict earning_hat** 
 
 
-
+El efecto de la capacitación  sobre los ingresos, explicando la capacitación  por si el individuo tuvo o no la oferta (jtpa_offer), es 1722. Vemos que difiere significativamente del coeficiente estimado en el punto 2.1, ya que este mismo sufre de endogeneidad. El calculado en el punto era 2649, significativamente mayor que el recién estimado, por lo tanto, podemos concluir que el coeficiente estimado en el punto 1.1 está sesgado hacia arriba.
 
 
 
