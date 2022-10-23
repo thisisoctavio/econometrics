@@ -31,8 +31,8 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 ##### 2020
 |Género|Salario promedio|  n | Weight| Min |	Max |
 |---|---|---|---|---|---|
-|Masculino|
-|Femenino|
+|Masculino|$59134.98| 84  |273603 |3600 | 180000|
+|Femenino|$56147.93|65 |311309 | 3000| 166300|
 
 #### Salario promedio para distintos rangos de edad
 
@@ -50,10 +50,10 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 |Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
 |---|---|---|---|---|---|---|
-|**25 - 34**|
-|**35 - 44**|
-|**45 - 54**|
-|**55 - 65**|
+|**25 - 34**| 28 |      89684   | $41034.27|    23559.2   |   15000|     152000|
+|**35 - 44**| 47  |    218914 |   $65952.73 |  37141.77  |    10000 |    180000|
+|**45 - 54**| 39   |   165808|    $64738.93  |  34227.9 |     12000  |   156000|
+|**55 - 65**| 35    |  110506  |  $43495.72   |28944.22|       3000   |  135000|
 
 
 #### Salariop promedio para distintos rangos de edad y genero
@@ -80,19 +80,19 @@ A la hora de evaluar el promedio en rangos de edad, asignamos el continuo de eda
 
 |Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
 |---|---|---|---|---|---|---|
-|**25 - 34**|
-|**35 - 44**|
-|**45 - 54**|
-|**55 - 65**|
+|**25 - 34**| 16 |      43989|    $51900.01 |  29843.37   |   15000|     152000|
+|**35 - 44**| 25  |     84492 |   $63690.44  | 40364.53  |    10000 |    180000|
+|**45 - 54**|22    |   81346   | $67268.15   |35936.41  |    33000   |  156000|
+|**55 - 65**| 21    |   63776   | $47716.23   |33915.82|       3600   |  135000|
 
 ##### 2020 - Femenino
 
 |Rangos de edad|n|weight|Salario promedio|Desvio estándar| Min |Max
 |---|---|---|---|---|---|---|
-|**25 - 34**|
-|**35 - 44**|
-|**45 - 54**|
-|**55 - 65**|
+|**25 - 34**| 12  |     45695  |  $30574.2|   5072.354    |  19000   |   40000|
+|**35 - 44**|22    |  134422  |  $67374.71 |  35609.99   |   15600  |   166300|
+|**45 - 54**|17     |  84462 |   $62303.02  | 33266.54  |    12000 |    115000|
+|**55 - 65**|14      | 46730|    $37735.67   |20013.18|       3000|      65000|
 
 ## Pregunta no. 2
 Utilizamos la ecuación de Mincer con el objetivo de estimar la influencia de la educación en el ingreso laboral, a través del método de Mínimo cuadrados ordinarios(MCO).Suponemos una relación lineal entre los años de educación y el retorno salarial, siendo el parámetro de interés el efecto marginal (en %) en el ingreso total de un año más de educación formal.Además, como condición necesaria para el cumplimiento de las propiedades asintóticas, debemos tener una muestra aleatoria, con una cantidad de observaciones n>30. Este es un supuesto factible para la EPH.
@@ -123,9 +123,11 @@ $$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género 
 dando como resultado
 ### 2021
   <img width="442" alt="image" src="https://user-images.githubusercontent.com/67765423/197366833-238a8406-0b1c-467b-b1f5-aa8fb8b83431.png">
-dando como resultado
 
 ### 2020
+
+<img width="917" alt="image" src="https://user-images.githubusercontent.com/67765423/197367999-adda28af-7c97-4689-b90d-fac9504b8386.png">
+
 
 Observando los coeficientes de la regresión de la variable nivel _ed,podemos observar que los coeficientes son significativos excepto la categoría superior universitaria completa. En este caso se presenta una muestra de $n=246$ siendo acotada, por este motivo podemos concluir a través de un análisis de una muestra completa de la EPH que la categoría superior universitaria completa presenta la característica de ser significativa
 
@@ -169,8 +171,8 @@ Obtenemos los valores predichos
 
 |Género|Salario Promedio|
 |---|---|
-|Masculino|111550|
-|Femenino|101625|
+|Masculino|$111550|
+|Femenino|$101625|
 
 Graficamente junto con los errores estandar de la estimacion con la edad
 
