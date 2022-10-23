@@ -122,12 +122,14 @@ $$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género 
 
 dando como resultado
 ### 2021
-<img width="804" alt="image" src="https://user-images.githubusercontent.com/67765423/197368182-475368cc-a244-40f0-97db-c602742d62a0.png">
+
+![image](https://user-images.githubusercontent.com/67765423/197374213-273678e6-dfcd-4d9f-8e2f-cbe9a9f5910a.png)
 
 
 ### 2020
 
-<img width="917" alt="image" src="https://user-images.githubusercontent.com/67765423/197367999-adda28af-7c97-4689-b90d-fac9504b8386.png">
+![image](https://user-images.githubusercontent.com/67765423/197374107-b5001da6-ea54-404d-8d64-07948794ef8d.png)
+
 
 
 Observando los coeficientes de la regresión de la variable nivel _ed,podemos observar que los coeficientes son significativos excepto la categoría superior universitaria completa. En este caso se presenta una muestra de $n=246$ siendo acotada, por este motivo podemos concluir a través de un análisis de una muestra completa de la EPH que la categoría superior universitaria completa presenta la característica de ser significativa
@@ -142,12 +144,14 @@ $$ logsalario = \beta_0 + \beta_1an.educ + \beta_2género +\beta_3an.educ*géner
 Dando como resultado
 
 ### 2021
-<img width="665" alt="image" src="https://user-images.githubusercontent.com/67765423/197367155-12dc8234-efab-4a93-a515-94638d6a4c51.png">
+![image](https://user-images.githubusercontent.com/67765423/197374228-422f7862-c065-4c2e-9e5a-e7c0892ed9e4.png)
+
 
 Podemos observar que el coefiente de la interacción entre genero y años de educación no es significativo.Con un analisis de una muestra completa de la EPH obtenemos que es un coeficiente significativo, Denotando claramente la brecha salarial que presentabamos como hipotesis
 
 ### 2020
-<img width="664" alt="image" src="https://user-images.githubusercontent.com/67765423/197368041-eea7f1fb-f7de-4cef-9059-f54f1324d0be.png">
+![image](https://user-images.githubusercontent.com/67765423/197374134-8ba12332-f612-40be-85c3-93bb1de5d2ad.png)
+
 
 
 Por otro lado se utilizo un modelo con intereaccion entre dummies(en este caso nivel_ed y género)
@@ -157,11 +161,12 @@ $$ logsalario = \beta_0 + \beta_1nivel.ed + \beta_2género +\beta_3nivel.ed*gén
 Obteniendo como resultado
 
 ### 2021
+![image](https://user-images.githubusercontent.com/67765423/197374237-3f8ef046-2aea-477d-a297-82adb6b516b1.png)
 
-<img width="829" alt="image" src="https://user-images.githubusercontent.com/67765423/197368201-9a9a7acd-170b-40ba-85b2-e9ab1d655abd.png">
+
 
 ### 2020
-<img width="913" alt="image" src="https://user-images.githubusercontent.com/67765423/197368047-3b683b3e-c4a3-4b73-873f-d2761206e241.png">
+![image](https://user-images.githubusercontent.com/67765423/197374145-6bbc2a5b-9e28-459b-a49a-db91f463abdc.png)
 
 ### pregunta no.4
 Utilizamos un modelo para estimar el salario promedio para un hombre y una mujer con educación universitaria (de grado) completo, casado, para todos los años posibles de edad 25-65
@@ -169,10 +174,12 @@ Utilizamos un modelo para estimar el salario promedio para un hombre y una mujer
 $$ salario = \beta_0 + \beta_1género $$
 
 ### 2021
-<img width="641" alt="image" src="https://user-images.githubusercontent.com/67765423/197367408-aa18a711-b625-4b98-92ae-af6f4b367f60.png">
+![image](https://user-images.githubusercontent.com/67765423/197374249-0d714ec7-fa0a-433f-9510-ad50f9ce2dbf.png)
+
 
 ### 2020
-<img width="641" alt="image" src="https://user-images.githubusercontent.com/67765423/197368064-fa28dc3f-f83c-4087-9dec-819ae4c0a5dd.png">
+![image](https://user-images.githubusercontent.com/67765423/197374186-f350b3fe-b5d6-4200-89fe-14a9d067c0d5.png)
+
 
 
 Obtenemos los valores predichos
@@ -196,28 +203,30 @@ Graficamente junto con los errores estandar de la estimacion con la edad
 
 ## Características
 
-consideramos el estudio del efecto de la capacitación dad por programas publicos sonre los salarios.El Job Training Partnership ACT(JTPA) fue un programa público de capacitación en los Estados Unidos del cual se hicieron numerosos estudios al respecto.
+Consideramos el estudio del efecto de la capacitación por programas publicos sobre los salarios.El Job Training Partnership ACT(JTPA) fue un programa público de capacitación en los Estados Unidos del cual se hicieron numerosos estudios al respecto.
 
-El JTPA empezó en 1983 y continuó hasta bien estrados los 1990.Un subprorama del mismo(Title II) se ofrecía a individuos con "problemas para el empleo" (barriers to employment): aquellos que usaban beneficios sociales de largo plazo, desertores de la primaria o secundaria, aquello con 15 o más semanas de desempleo, con problemas con el inglés, discapacidades mentales o físicas, problemas de lectura o arrestos.Estos individuos fueron *aleatoriamente ofrecidos* la posiblidad de capacitarse en jTPA, mientras que aquellos no seleccionados fueron exlcluidos por 18 meses de toda capacitación.No todos los ofrecidos efectivos efectivamente hicieron la capacitación.
+El JTPA empezó en 1983 y continuó hasta bien estrados los 1990.Un subprograma del mismo(Title II) se ofrecía a individuos con "problemas para el empleo" (barriers to employment): aquellos que usaban beneficios sociales de largo plazo, desertores de la primaria o secundaria, aquello con 15 o más semanas de desempleo, con problemas con el inglés, discapacidades mentales o físicas, problemas de lectura o arrestos.Estos individuos fueron *aleatoriamente ofrecidos* la posiblidad de capacitarse en JTPA, mientras que aquellos no seleccionados fueron excluidos por 18 meses de toda capacitación.No todos los ofrecidos efectivos efectivamente hicieron la capacitación.
 Usamos la ase de datos de Abadie, Angrist e imbens(2002) que contiene información sobre adultos que participaron y que no participaron en JTPA
 
 ## Pregunta no.1
 Para ver el efecto de JTPA training sobre los ingresos, realizamos los siguientes modelos de regresión, teniendo en cuenta Q-1 dummies en edad, en este caso 4
 
 #### Modelo en niveles
+$$ earnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age $$
+
+![image](https://user-images.githubusercontent.com/67765423/197373688-204e5dcc-18e9-4fdb-b24c-e6d9c65eaf16.png)
 
 
-![image](https://user-images.githubusercontent.com/67765423/197368765-18339be4-81d1-4ca3-a001-1c4aba316409.png)
-
-![image](https://user-images.githubusercontent.com/67765423/197368963-ce470097-3505-4660-9d93-d63d7e973a5d.png)
 
 Podemos ver que el efecto del entrenamiento sobre los ingresos, controlando por todas las demás variables, es positivo.Observamos que un individuo que realizo la capacitación gana $2649 mas que uno que no la realizo.Este resultado es sin distinguir entre género,edad y etnia.Además, podemos ver que la variable es significativa ya que el valor del estadistico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
 #### Modelo log-lin
 en este caso eliminamos earnings menores a 1, para aplicar el modelo en terminos logaritmicos
-![image](https://user-images.githubusercontent.com/67765423/197368913-0c5453a1-9bcb-48b9-9d6f-8fee4fe4c1dc.png)
 
-![image](https://user-images.githubusercontent.com/67765423/197368969-9cf82b6f-2485-4e98-95b4-44a8d188217f.png)
+$$ logearnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age $$
+
+
+![image](https://user-images.githubusercontent.com/67765423/197373796-85fbaec0-654c-467b-8b31-2bb45193bfba.png)
 
 Observando la semielasticidad, la interpretación de los coeficientes difiere del anterior modelo, en este caso los coeficientes miden un cambia porcentual en la variable dependiente ante un cambio absoluto en la independiente.Un individuo que realizo la capacitación gana un 26% mas que uno que no la realizo.Nuevamente, este resultado es sin distinguir entre género,edad y etnia.Además, podemos observar que la variable es sifnificativa ya que el valor del estadistico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
@@ -226,38 +235,47 @@ Observando la semielasticidad, la interpretación de los coeficientes difiere de
 Para ver si hay diferencias entre hombres y mujeres en terminos del efecto de la capacitación creamos la variable jta_training_women la cual consiste en la interaccion entre la variable jtpa_training y la variable sex.
 
 Para ver el efecto de jtpa_training_women sobre los ingresos realizamos la siguiente regresion:
-![image](https://user-images.githubusercontent.com/67765423/197369187-9ce3e3cc-906c-4597-8971-d81f78aba54f.png)
 
-![image](https://user-images.githubusercontent.com/67765423/197369199-e808fc4e-1cab-4565-916b-a7a9ef7d2fa4.png)
+$$ earnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age + \beta_9jtpa.training.women $$
+
+
+![image](https://user-images.githubusercontent.com/67765423/197373811-0deae3bd-05cf-47b9-9b18-0e66fe462f5d.png)
 
 La diferencia por génerp en los rendimientos de la capacitación la podemos observar en la variable jtpa_training_women, la misma nos dice que la mujer gana en promedio $1951 mas que el hombre(para cualquier nivel de edad y cualquiera sea la etnia de los individuos)
 
 utilizando un modelo Log-lin
 
+$$ logearnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age + \beta_9jtpa.training.women $$
 
-![image](https://user-images.githubusercontent.com/67765423/197369249-c76ac314-62ab-4302-9f53-27c9ea440e0a.png)
 
-La diferencia en los rendimientos la d¿vemos en la interaccion entre sexo y jtpa_training. vemos que el rendimiento de la capacitacion en las mujeres es 25% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
+![image](https://user-images.githubusercontent.com/67765423/197373830-f6d35ac9-e08d-41c5-99cf-c85f44117c77.png)
+
+La diferencia en los rendimientos la obsevamos en la **interaccion** entre sexo y jtpa_training.Vemos que el rendimiento de la capacitación en las mujeres es 25% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
 
 ## Pregunta no.3:Elaborar un argumento para la posuble endogeneidad de jtpa training
 La variable jtpa_capacitacion es endógena ya que depende en parte de la variable jtpa_offer debido a que aquellos sujetos que reciben la oferta del curso disponible son más propensos a asistir a este curso y obtener capacitación.
-Así, la variable jtpa_offer se puede usar como variable instrumental ya que cumple con los dos requisitos necesarios:
+Así,la variable jtpa_offer se puede usar como variable instrumental ya que cumple con los dos requisitos necesarios:
 -	Exogeneidad: Como la oferta es aleatoria, es exógena y por ende la covarianza entre jtpa_offer y los errores es nula.
 -	Relevancia: El recibir la oferta explica en parte el hecho de que un sujeto obtenga capacitación, es decir la covarianza entre jtpa_offer y jtpa_training debe ser diferente de cero. 
 
 ## Pregunta no.4:Uso de IV para solucionar endogeneidad
 Para solucionar la endogeneidad con la variable instrumental elegida corrimos la siguiente regresión en STATA
+
 **ivregress 2sls earning (jtpa_trainign = jtpa_offer) sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
 
-![image](https://user-images.githubusercontent.com/67765423/197369418-f687ad0a-4574-4de2-a0b8-5a88a588c6a3.png)
+![image](https://user-images.githubusercontent.com/67765423/197373911-7c6e72d0-305f-4277-a857-0f27fdccc2c6.png)
 
 El comando este realiza la regresión en dos etapas. 
 La primer etapa consiste en regresar la variable endógena en el instrumento , controlando por las demás variables exógenas:
+
 **reg jtpa_training jtpa_offer**
+
 **predict jtpa_training_hat**
 
 La segunda etapa consiste en 
+
 **reg earning jtpa_trainign sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
+
 **predict earning_hat** 
 
 
