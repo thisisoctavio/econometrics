@@ -184,17 +184,13 @@ Obtenemos los valores predichos
 
 Graficamente junto con los errores estandar de la estimacion con la edad
 
-### 2021 Masculino - Salario en miles
-![image](https://user-images.githubusercontent.com/67765423/197369890-a16bb706-4654-4207-b793-a3373a0e4687.png)
+### 2021 Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197370253-aa49bcda-76c3-4295-8927-b109d2d8505d.png)
 
-### 2021 Femenino - Salario en miles
-![image](https://user-images.githubusercontent.com/67765423/197369909-359d610f-87a7-4780-a049-bb2a9f020068.png)
 
-### 2020 Masculino - Salario en miles
-![image](https://user-images.githubusercontent.com/67765423/197369928-b4e230f2-7d49-441c-9180-9043917e2e77.png)
+### 2020 Salario en miles
+![image](https://user-images.githubusercontent.com/67765423/197370180-7d49d0ed-e2af-41f0-b2ff-b58b436dcaba.png)
 
-### 2020 Femenino - Salario en miles
-![image](https://user-images.githubusercontent.com/67765423/197369956-347c7cc0-03e0-439b-92d3-8cd2a4254f21.png)
 
 # Segunda parte: Efecto de la capacitación en los salarios
 
