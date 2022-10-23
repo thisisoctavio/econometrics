@@ -197,8 +197,34 @@ Graficamente junto con los errores estandar de la estimacion con la edad
 ![image](https://user-images.githubusercontent.com/67765423/197368113-66202654-ec9a-444e-9f38-c193935ddd3f.png)
 
 
-# segunda parte
+# Segunda parte: Efecto de la capacitación en los salarios
 
+## Características
+
+consideramos el estudio del efecto de la capacitación dad por programas publicos sonre los salarios.El Job Training Partnership ACT(JTPA) fue un programa público de capacitación en los Estados Unidos del cual se hicieron numerosos estudios al respecto.
+
+El JTPA empezó en 1983 y continuó hasta bien estrados los 1990.Un subprorama del mismo(Title II) se ofrecía a individuos con "problemas para el empleo" (barriers to employment): aquellos que usaban beneficios sociales de largo plazo, desertores de la primaria o secundaria, aquello con 15 o más semanas de desempleo, con problemas con el inglés, discapacidades mentales o físicas, problemas de lectura o arrestos.Estos individuos fueron *aleatoriamente ofrecidos* la posiblidad de capacitarse en jTPA, mientras que aquellos no seleccionados fueron exlcluidos por 18 meses de toda capacitación.No todos los ofrecidos efectivos efectivamente hicieron la capacitación.
+Usamos la ase de datos de Abadie, Angrist e imbens(2002) que contiene información sobre adultos que participaron y que no participaron en JTPA
+
+## Pregunta no.1
+Para ver el efecto de JTPA training sobre los ingresos, realizamos los siguientes modelos de regresión, teniendo en cuenta Q-1 dummies en edad, en este caso 4
+
+#### Modelo en niveles
+
+
+![image](https://user-images.githubusercontent.com/67765423/197368765-18339be4-81d1-4ca3-a001-1c4aba316409.png)
+
+![image](https://user-images.githubusercontent.com/67765423/197368963-ce470097-3505-4660-9d93-d63d7e973a5d.png)
+
+Podemos ver que el efecto del entrenamiento sobre los ingresos, controlando por todas las demás variables, es positivo.Observamos que un individuo que realizo la capacitación gana $2649 mas que uno que no la realizo.Este resultado es sin distinguir entre género,edad y etnia.Además, podemos ver que la variable es significativa ya que el valor del estadistico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
+
+#### Modelo log-lin
+en este caso eliminamos earnings menores a 1, para aplicar el modelo en terminos logaritmicos
+![image](https://user-images.githubusercontent.com/67765423/197368913-0c5453a1-9bcb-48b9-9d6f-8fee4fe4c1dc.png)
+
+![image](https://user-images.githubusercontent.com/67765423/197368969-9cf82b6f-2485-4e98-95b4-44a8d188217f.png)
+
+Observando la semielasticidad, la interpretación de los coeficientes difiere del anterior modelo, en este caso los coeficientes miden un cambia porcentual en la variable dependiente ante un cambio absoluto en la independiente.Un individuo que realizo la capacitación gana un 26% mas que uno que no la realizo.Nuevamente, este resultado es sin distinguir entre género,edad y etnia.Además, podemos observar que la variable es sifnificativa ya que el valor del estadistico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
 
 
