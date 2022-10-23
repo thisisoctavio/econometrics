@@ -172,6 +172,17 @@ Obtenemos los valores predichos
 |Masculino|111550|
 |Femenino|101625|
 
+Graficamente junto con los errores estandar de la estimacion con la edad
+
+### Masculino 2021
+![image](https://user-images.githubusercontent.com/67765423/197367781-9ff113a1-bc25-4e69-a516-608740fe2f4a.png)
+
+### Femenino 2021
+![image](https://user-images.githubusercontent.com/67765423/197367830-b743e944-07e6-49f3-a11b-2c150fd864ea.png)
+
+### Masculino 2021
+
+### Femenino 2020
 
 
 
@@ -181,7 +192,6 @@ Obtenemos los valores predichos
 
 
 
-## Pregunta no. 2
 
-$$ \text{salario} = \beta_0 + \beta_1 \cdot \text{se-in} + \beta_{2} \cdot \text{se-co} + \beta_{3} \cdot \text{un-in} + \beta_{4} \cdot \text{un-co} + \beta_{5} \cdot \text{sin} + \beta_6 \cdot \text{mujer} + \beta_7 \cdot \text{unido} + \beta_8 \cdot \text{casado} + \beta_9 \cdot \text{divorciado} + \beta_{10} \cdot \text{viudo} + \beta_{11} \cdot \text{edad} + \beta_{12} \cdot \text{edad}^2 $$
+
 
