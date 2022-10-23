@@ -122,7 +122,8 @@ $$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género 
 
 dando como resultado
 ### 2021
-  <img width="442" alt="image" src="https://user-images.githubusercontent.com/67765423/197366833-238a8406-0b1c-467b-b1f5-aa8fb8b83431.png">
+<img width="804" alt="image" src="https://user-images.githubusercontent.com/67765423/197368182-475368cc-a244-40f0-97db-c602742d62a0.png">
+
 
 ### 2020
 
@@ -157,7 +158,7 @@ Obteniendo como resultado
 
 ### 2021
 
-<img width="819" alt="image" src="https://user-images.githubusercontent.com/67765423/197367301-f1467322-3369-457c-8cd6-5b8e9ad6c7c9.png">
+<img width="829" alt="image" src="https://user-images.githubusercontent.com/67765423/197368201-9a9a7acd-170b-40ba-85b2-e9ab1d655abd.png">
 
 ### 2020
 <img width="913" alt="image" src="https://user-images.githubusercontent.com/67765423/197368047-3b683b3e-c4a3-4b73-873f-d2761206e241.png">
@@ -183,20 +184,20 @@ Obtenemos los valores predichos
 
 Graficamente junto con los errores estandar de la estimacion con la edad
 
-### Masculino 2021
+### 2021 Masculino 
 ![image](https://user-images.githubusercontent.com/67765423/197367781-9ff113a1-bc25-4e69-a516-608740fe2f4a.png)
 
-### Femenino 2021
+### 2021 Femenino 
 ![image](https://user-images.githubusercontent.com/67765423/197367830-b743e944-07e6-49f3-a11b-2c150fd864ea.png)
 
-### Masculino 2020
+### 2020 Masculino 
 ![image](https://user-images.githubusercontent.com/67765423/197368107-27b2d4ec-c172-410c-ae56-51e8ceb4260a.png)
 
-### Femenino 2020
+### 2020 Femenino 
 ![image](https://user-images.githubusercontent.com/67765423/197368113-66202654-ec9a-444e-9f38-c193935ddd3f.png)
 
 
-
+# segunda parte
 
 
 
