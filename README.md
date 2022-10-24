@@ -198,6 +198,17 @@ Gráficamente junto con los errores estándar de la estimación con la edad
 ### 2020 Salario en miles
 ![image](https://user-images.githubusercontent.com/67765423/197370180-7d49d0ed-e2af-41f0-b2ff-b58b436dcaba.png)
 
+El salario estimado utilizando el siguiente modelo una vez terminada la carrera de Economía en la UBA para los distintos años:
+
+$$ Salario_i = \beta_0 + \beta_1est.civil_i+\beta_2nivel.ed _i+ \beta_3género_i + \beta_4edad_i $$
+
+|Nombre|Salario estimado 2020|Salario estimado 2021|
+|---|---|---|
+|Lucas|$60326.333|$107519.32|
+|Victoria|$51531.881|$84486.715|
+|Octavio|$60326.333|$107519.32|
+|Sebastián|$60326.333|$107519.32|
+
 
 # Segunda parte: Efecto de la capacitación en los salarios
 
