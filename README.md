@@ -204,10 +204,10 @@ $$ Salario_i = \beta_0 + \beta_1est.civil_i+\beta_2nivel.ed _i+ \beta_3género_i
 
 |Nombre|Salario estimado 2020|Salario estimado 2021|
 |---|---|---|
-|Lucas|$60326.333|$107519.32|
-|Victoria|$51531.881|$84486.715|
-|Octavio|$60326.333|$107519.32|
-|Sebastián|$60326.333|$107519.32|
+|Lucas|$60200|$107825|
+|Victoria|$51532|$84487|
+|Octavio|$60074|$108131|
+|Sebastián|$60326|$107519|
 
 
 # Segunda parte: Efecto de la capacitación en los salarios
