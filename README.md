@@ -291,4 +291,4 @@ La segunda etapa consiste en regresar a la variable earnings en la variable jtpa
 **predict earning_hat** 
 
 
-El efecto de la capacitación sobre los ingresos, explicando  a la capacitación por si el individuo tuvo o no la oferta (jtpa_offer), es 1740. Vemos que difiere significativamente del coeficiente estimado en el punto 2.1, ya que este mismo sufria de endogeneidad. El calculado en 2.1 era 2614, significativamente mayor al recién estimado: estaba sesgado hacia arriba. Podemos concluir que con la adopción de la variable instrumental "Jtpa-offer", corregimos el sesgo de jtpa-training. 
+El efecto de la capacitación sobre los ingresos (explicando a la capacitación por si el individuo fue ofrecido a hacerla o no), es 1740. Vemos que el coeficiente obtenido difiere significativamente del coeficiente estimado en el punto 2.1, ya que este mismo sufria de endogeneidad. El calculado en 2.1 era 2614, significativamente mayor al recién estimado: estaba sesgado hacia arriba. Podemos concluir que con la adopción de la variable instrumental "Jtpa-offer", corregimos el sesgo de jtpa-training. 
