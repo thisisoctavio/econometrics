@@ -220,7 +220,7 @@ El JTPA empezó en 1983 y continuó hasta bien entrados los 1990.Un subprograma 
 Usamos la base de datos de Abadie, Angrist e imbens(2002) que contiene información sobre adultos que participaron y que no participaron en JTPA
 
 ## Pregunta no.1
-Para ver el efecto de JTPA training sobre los ingresos, realizamos los siguientes modelos de regresión, teniendo en cuenta Q-1 dummies en edad, en este caso 4
+Para ver el efecto de JTPA training sobre los ingresos, realizamos los siguientes modelos de regresión, teniendo en cuenta 4 dummies en edad:
 
 #### Modelo en niveles
 $$ earnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age $$
@@ -229,21 +229,21 @@ $$ earnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta
 
 
 
-Podemos ver que el efecto del entrenamiento sobre los ingresos, controlando por todas las demás variables, es positivo.Observamos que un individuo que realizó la capacitación gana $2649 más que uno que no la realizó.Este resultado es sin distinguir entre género,edad y etnia.Además, podemos ver que la variable es significativa ya que el valor del estadístico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
+Podemos ver que el efecto del entrenamiento sobre los ingresos, controlando por todas las demás variables, es positivo. Observamos que un individuo que realizó la capacitación gana en promedio $2614 más que uno que no la realizó. Este resultado es sin distinguir entre género, edad y etnia. Además, podemos ver que la variable es significativa ya que el valor del estadístico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
 #### Modelo log-lin
-en este caso eliminamos earnings menores a 1, para aplicar el modelo en términos logarítmicos
+En este caso eliminamos earnings menores a 1, para aplicar el modelo en términos logarítmicos:
 
 $$ logearnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age $$
 
 
 ![image](https://user-images.githubusercontent.com/67765423/197373796-85fbaec0-654c-467b-8b31-2bb45193bfba.png)
 
-Observando la semielasticidad, la interpretación de los coeficientes difiere del anterior modelo, en este caso los coeficientes miden un cambia porcentual en la variable dependiente ante un cambio absoluto en la independiente.Un individuo que realizó la capacitación gana un 26% más que uno que no la realizó.Nuevamente, este resultado es sin distinguir entre género,edad y etnia.Además, podemos observar que la variable es significativa ya que el valor del estadístico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
+Observando la semielasticidad, la interpretación de los coeficientes difiere del anterior modelo: en este caso los coeficientes miden un cambio porcentual en la variable dependiente ante un cambio absoluto en la independiente. Un individuo que realizó la capacitación gana en promedio un 25,9% más que uno que no la realizó. Nuevamente, este resultado es sin distinguir entre género, edad y etnia. Además, podemos observar que la variable es significativa ya que el valor del estadístico t no es mayor a 2 en valor absoluto y el p-value es menor a 0.05
 
 ## Pregunta no.2:Evaluar si existen diferencias entre hombres y mujeres en términos del efecto de la capacitación
 
-Para ver si hay diferencias entre hombres y mujeres en términos del efecto de la capacitación creamos la variable jta_training_women la cual consiste en la interacción entre la variable jtpa_training y la variable sex.
+Para ver si hay diferencias entre hombres y mujeres en términos del efecto de la capacitación creamos la variable jta_training_women la cual consiste en la **interacción** entre la variable jtpa_training y la variable sex.
 
 Para ver el efecto de jtpa_training_women sobre los ingresos realizamos la siguiente regresión:
 
@@ -252,42 +252,43 @@ $$ earnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta
 
 ![image](https://user-images.githubusercontent.com/67765423/197373811-0deae3bd-05cf-47b9-9b18-0e66fe462f5d.png)
 
-La diferencia por género en los rendimientos de la capacitación la podemos observar en la variable jtpa_training_women, la misma nos dice que la mujer gana en promedio $1951 más que el hombre(para cualquier nivel de edad y cualquiera sea la etnia de los individuos)
+La diferencia por género en los rendimientos de la capacitación la podemos observar en la variable jtpa_training_women, la misma nos dice que la mujer gana en promedio $1951 más que el hombre (para cualquier nivel de edad y cualquiera sea la etnia de los individuos). Nuevamente, podemos concluir que los resultados son significativos debido al bajo p-valor del Test.
 
-utilizando un modelo Log-lin
+Utilizando un modelo Log-lin:
 
 $$ logearnings=\beta_0 + \beta_1jtpa.training + \beta_2sex + \beta_3hsorged + \beta_4black + \beta_5hispanic+\beta_6married + \beta_7wkless + \beta_8age + \beta_9jtpa.training.women $$
 
 
 ![image](https://user-images.githubusercontent.com/67765423/197373830-f6d35ac9-e08d-41c5-99cf-c85f44117c77.png)
 
-La diferencia en los rendimientos la observamos en la **interacción** entre sexo y jtpa_training.Vemos que el rendimiento de la capacitación en las mujeres es 25% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
+La diferencia en los rendimientos la observamos en la **interacción** entre sexo y jtpa_training. Vemos que el rendimiento de la capacitación en las mujeres es 10% mayor a la de los hombres, sin distinguir entre rango etario y etnia.
 
 ## Pregunta no.3:Elaborar un argumento para la posible endogeneidad de jtpa training
-La variable jtpa_capacitacion es endógena ya que depende en parte de la variable jtpa_offer debido a que aquellos sujetos que reciben la oferta del curso disponible son más propensos a asistir a este curso y obtener capacitación.
+La variable jtpa_capacitacion es endógena ya que depende en parte de la variable jtpa_offer debido a que aquellos sujetos que reciben la oferta del curso disponible son más propensos a asistir a este curso y obtener capacitación. Es menester aclarar que la variable isntrumental elegida depende de los datos disponibles. Podemos encontrar diversos factores que expliquen a jtpa_trainnig, tales como la cantidad de hijos del individuo o la zona en la que este vive, sin embargo, la variable instrumental elegida queda supeditada a los datos disponibles: en este caso jtpa_offer.
 Así,la variable jtpa_offer se puede usar como variable instrumental ya que cumple con los dos requisitos necesarios:
 -	Exogeneidad: Como la oferta es aleatoria, es exógena y por ende la covarianza entre jtpa_offer y los errores es nula.
 -	Relevancia: El recibir la oferta explica en parte el hecho de que un sujeto obtenga capacitación, es decir la covarianza entre jtpa_offer y jtpa_training debe ser diferente de cero. 
 
 ## Pregunta no.4:Uso de IV para solucionar endogeneidad
-Para solucionar la endogeneidad con la variable instrumental elegida corrimos la siguiente regresión en STATA
+Para solucionar la endogeneidad con la variable instrumental elegida corrimos la siguiente regresión:
 
 **ivregress 2sls earning (jtpa_trainign = jtpa_offer) sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
 
 ![image](https://user-images.githubusercontent.com/67765423/197373911-7c6e72d0-305f-4277-a857-0f27fdccc2c6.png)
 
-El comando este realiza la regresión en dos etapas. 
-La primer etapa consiste en regresar la variable endógena en el instrumento , controlando por las demás variables exógenas:
+El comando utilizado realiza la regresión en dos etapas: 
+La primer etapa consiste en regresar la variable endógena (jtpa_training) en el instrumento (jtpa_offer), controlando por las demás variables exógenas:
 
-**reg jtpa_training jtpa_offer**
+**reg jtpa_training jtpa_offer sex ...**
 
 **predict jtpa_training_hat**
 
-La segunda etapa consiste en 
+La segunda etapa consiste en regresar a la variable earnings en la variable jtpa_training_hat, controlando por las demas variables:
+
 
 **reg earning jtpa_trainign sex hsorged black hispanic married wkless afdc age2225 age2629 age3035 age3644**
 
 **predict earning_hat** 
 
 
-El efecto de la capacitación  sobre los ingresos, explicando la capacitación  por si el individuo tuvo o no la oferta (jtpa_offer), es 1722. Vemos que difiere significativamente del coeficiente estimado en el punto 2.1, ya que este mismo sufre de endogeneidad. El calculado en el punto era 2649, significativamente mayor que el recién estimado, por lo tanto, podemos concluir que el coeficiente estimado en el punto 1.1 está sesgado hacia arriba.
+El efecto de la capacitación sobre los ingresos, explicando  a la capacitación por si el individuo tuvo o no la oferta (jtpa_offer), es 1740. Vemos que difiere significativamente del coeficiente estimado en el punto 2.1, ya que este mismo sufria de endogeneidad. El calculado en 2.1 era 2614, significativamente mayor al recién estimado: estaba sesgado hacia arriba. Podemos concluir que con la adopción de la variable instrumental "Jtpa-offer", corregimos el sesgo de jtpa-training. 
