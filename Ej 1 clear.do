@@ -215,3 +215,45 @@ twoway lfitci salario edad if nivel_ed == 6 & ch04 ==1, stdp || scatter salario 
 
 ****en conjunto
 twoway lfitci salario edad if nivel_ed == 6 , stdp || scatter salario edad if  nivel_ed == 6, by(ch04)
+
+
+
+* Estimación de salario 
+
+* reemplamos los coeficientes estimados en el siguiente modelo de regresion
+
+**** salario i.b(5).ch07 i.b(5).nivel_ed hombre edad 
+**2020
+
+
+* lucas 
+
+display (46740.03) + (7693.531) +  (8794.452) + 23*(-126.16)
+
+*octavio
+
+display (46740.03) + (7693.531) +  (8794.452) + 23*(-126.16)
+* sebastian 
+
+display (46740.03) + (7693.531) +  (8794.452) + 23*(-126.16)
+
+* victoria
+
+display (46740.03) + (7693.531) + 0 + 23*(-126.16)
+
+** 2021 
+
+* lucas 
+
+display (65600.66) + ( 11854.47) +  23032.6 + 23*( 305.7211)
+
+*octavio
+
+display (65600.66) + ( 11854.47) +  23032.6 + 23*( 305.7211)
+* sebastian 
+
+display (65600.66) + ( 11854.47) +  23032.6 + 23*( 305.7211)
+
+* victoria
+
+display (65600.66) + ( 11854.47) + (0) + 23*( 305.7211)
