@@ -123,7 +123,7 @@ $$ \text{Salario} = \beta_0 + \beta_1est.civil+\beta_2nivel.ed + \beta_3género 
 dando como resultado
 ### 2021
 
-![image](https://user-images.githubusercontent.com/67765423/197374213-273678e6-dfcd-4d9f-8e2f-cbe9a9f5910a.png)
+
 
 <img width="915" alt="image" src="https://user-images.githubusercontent.com/67765423/197669787-6b272857-f091-4882-be3c-6dde33eaf59a.png">
 
@@ -131,7 +131,6 @@ dando como resultado
 
 ### 2020
 
-![image](https://user-images.githubusercontent.com/67765423/197374107-b5001da6-ea54-404d-8d64-07948794ef8d.png)
 
 <img width="1054" alt="image" src="https://user-images.githubusercontent.com/67765423/197670432-b54f6283-c1d7-48d9-8304-d5432199b79e.png">
 
@@ -148,7 +147,6 @@ $$ logsalario = \beta_0 + \beta_1an.educ + \beta_2género +\beta_3an.educ*géner
 Dando como resultado
 
 ### 2021
-![image](https://user-images.githubusercontent.com/67765423/197374228-422f7862-c065-4c2e-9e5a-e7c0892ed9e4.png)
 
 <img width="783" alt="image" src="https://user-images.githubusercontent.com/67765423/197669918-82c99e45-8435-4d35-9586-d817a24a0685.png">
 
@@ -157,7 +155,6 @@ Dando como resultado
 Podemos observar que el coefiente de la interacción entre genero y años de educación no es significativo.Con un analisis de una muestra completa de la EPH obtenemos que es un coeficiente significativo, Denotando claramente la brecha salarial que presentabamos como hipotesis
 
 ### 2020
-![image](https://user-images.githubusercontent.com/67765423/197374134-8ba12332-f612-40be-85c3-93bb1de5d2ad.png)
 
 <img width="760" alt="image" src="https://user-images.githubusercontent.com/67765423/197670551-45b22c6d-505d-475b-861b-55c78392e4dc.png">
 
@@ -169,7 +166,6 @@ $$ logsalario = \beta_0 + \beta_1nivel.ed + \beta_2género +\beta_3nivel.ed*gén
 Obteniendo como resultado
 
 ### 2021
-![image](https://user-images.githubusercontent.com/67765423/197374237-3f8ef046-2aea-477d-a297-82adb6b516b1.png)
 
 <img width="936" alt="image" src="https://user-images.githubusercontent.com/67765423/197669982-044a015c-dd4d-45bb-92fc-347de4ef160e.png">
 
@@ -177,7 +173,6 @@ Obteniendo como resultado
 
 
 ### 2020
-![image](https://user-images.githubusercontent.com/67765423/197374145-6bbc2a5b-9e28-459b-a49a-db91f463abdc.png)
 <img width="1077" alt="image" src="https://user-images.githubusercontent.com/67765423/197670909-ff5afe1d-5b4a-48d7-990b-7d471cfff537.png">
 
 
