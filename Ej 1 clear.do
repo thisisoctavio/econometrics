@@ -68,7 +68,7 @@ bysort generation ch04: summarize salario [w= pondiio]
 ****************************BASES*********************************
 
 
-*genero:hombre(generado)
+*genero:mujer(generado)
 *estadocivil(ch07):soltero(la realizo en regresion)
 
 ****creo variable edad^2 para modelizar a traves de una funcion cuadratica
@@ -76,19 +76,19 @@ bysort generation ch04: summarize salario [w= pondiio]
 gen edadcuadrado = edad^2
 
 *creo variable dummy 
-gen hombre=0
-replace hombre=1 if ch04 ==1
-lab var hombre "=1 si es hombre"
+gen mujer=0
+replace mujer=1 if ch04 ==2
+lab var mujer "=1 si es mujer"
 
 **************categorias base******
-*mujer: hombre =0
+*mujer=0(hombre)
 *soltero:ch07 = 5
 *universitario completo: nivel_ed = 5
 
 
 * correr la regresión y almacenar la tabla en la memoria de eststo
 
-reg salario i.b(5).ch07 i.b(5).nivel_ed hombre edad edadcuadrado
+reg salario i.b(5).ch07 i.b(5).nivel_ed mujer edad edadcuadrado
 
 
 ***test de hipotesis***
@@ -189,11 +189,11 @@ gen ln_salario = ln(salario)
 ******regresion con continuo en años de educacion**************************
 
 
-reg ln_salario an_educ hombre c.an_educ#i.hombre 
+reg ln_salario an_educ mujer c.an_educ#i.hombre 
 
 ******regresion con dummy en años de educacion
 
-reg ln_salario i.b(6).nivel_ed i.hombre i.nivel_ed#i.hombre
+reg ln_salario i.b(6).nivel_ed i.mujer i.nivel_ed#i.mujer
 
 
 ********************************************************************************
