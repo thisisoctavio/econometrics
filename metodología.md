@@ -189,7 +189,7 @@ Obtenemos los valores predichos
 |Masculino|$111550|$77538.46|
 |Femenino|$101625|$80500|
 
-Graficamente junto con los errores estandar de la estimacion con la edad
+Gráficamente junto con los errores estándar de la estimación con la edad se ilustra la regresión lineal del modelo junto con un intervalo de confianza del 95%, con el objetivo de ilustrar la diferencia salarial entre el género, claramente se demuestra la hipótesis de forma más clara en la muestra del año 2021.
 
 ### 2021 Salario en miles
 ![image](https://user-images.githubusercontent.com/67765423/197370253-aa49bcda-76c3-4295-8927-b109d2d8505d.png)
@@ -197,6 +197,8 @@ Graficamente junto con los errores estandar de la estimacion con la edad
 
 ### 2020 Salario en miles
 ![image](https://user-images.githubusercontent.com/67765423/197370180-7d49d0ed-e2af-41f0-b2ff-b58b436dcaba.png)
+
+En el grafico se ilustr la regreisno lineal del modelo junto 
 
 El salario estimado utilizando el siguiente modelo una vez terminada la carrera de Economía en la UBA para los distintos años:
 
