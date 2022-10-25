@@ -189,7 +189,7 @@ Obtenemos los valores predichos
 |Masculino|$111550|$77538.46|
 |Femenino|$101625|$80500|
 
-Gráficamente junto con los errores estándar de la estimación con la edad se ilustra la regresión lineal del modelo junto con un intervalo de confianza del 95%, con el objetivo de ilustrar la diferencia salarial entre el género, claramente se demuestra la hipótesis de forma más clara en la muestra del año 2021.
+En los gráficos siguientes se ilustra la regresión lineal del modelo junto con un intervalo de confianza del 95% con el objetivo de ilustrar la diferencia salarial entre los géneros. La muestra del 2021 coincide con la hipótesis de que si existe una brecha salarial. Sin embargo ambas muestras poseen gran variabilidad no explicada por la línea de regresión
 
 ### 2021 Salario en miles
 ![image](https://user-images.githubusercontent.com/67765423/197370253-aa49bcda-76c3-4295-8927-b109d2d8505d.png)
